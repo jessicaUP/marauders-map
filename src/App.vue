@@ -1,8 +1,11 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+</script>
+
+<script>
 export default {
   name: 'marauders-map',
-  data () {
+  data() {
     return {
       url_base: 'https://legacy--api.herokuapp.com/api/v1',
       query: '',
@@ -10,10 +13,10 @@ export default {
     }
   },
   methods: {
-    fetchCharacter (e) {
+    fetchCharacter(e) {
       fetch(`${this.api_base}character?q=${this.query}`)
         .then(res => {
-          return 
+          return
         })
     }
   }
