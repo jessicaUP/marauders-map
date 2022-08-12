@@ -23,15 +23,6 @@ export const useCharacterStore = defineStore({
       let loadCount = 0;
 
       this.loading = true;
-      try {
-        this.staff = await fetch('http://hp-api.herokuapp.com/api/characters/staff')
-          .then((res) => res.json());
-      } catch (error) {
-        this.errors.push(error);
-      } finally {
-        loadCount++;
-        if (loadCount === 2) this.loading = false;
-      }
 
       try {
         this.students = await fetch('http://hp-api.herokuapp.com/api/characters/students')
@@ -42,6 +33,17 @@ export const useCharacterStore = defineStore({
         loadCount++;
         if (loadCount === 2) this.loading = false;
       }
+
+      try {
+        this.staff = await fetch('http://hp-api.herokuapp.com/api/characters/staff')
+          .then((res) => res.json());
+      } catch (error) {
+        this.errors.push(error);
+      } finally {
+        loadCount++;
+        if (loadCount === 2) this.loading = false;
+      }
+
     }
   }
 })

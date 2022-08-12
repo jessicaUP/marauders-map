@@ -2,12 +2,12 @@
 import { storeToRefs } from 'pinia';
 import { RouterLink, RouterView } from 'vue-router'
 import { useCharacterStore } from './stores/characters'
+import CharactersView from './views/CharactersView.vue'
 
-const { staff, students, character, loading, errors } = storeToRefs(useCharacterStore());
+
+// const { staff, students, character, loading, errors } = storeToRefs(useCharacterStore());
 const { fetchCharacters } = useCharacterStore();
-
-fetchCharacters()
-  .then(() => console.log('CHECK', students));
+fetchCharacters();
 
 
 </script>
@@ -33,6 +33,8 @@ fetchCharacters()
       @keypress="fetchCharacter"
       />
   </div> -->
+
+  <CharactersView/>
 
   <div class="open-wrap">
     <button
