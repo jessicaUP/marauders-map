@@ -31,6 +31,7 @@ const { changeIndex } = useMapStore();
         v-if="staff" 
         v-for="character in staff" 
         :key="character.name"
+        @click="updateCharacter(character.name, 'staff')"
       >{{ character.name }}</button>
     </div>
   </div>
