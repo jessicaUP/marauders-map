@@ -48,22 +48,11 @@ const { openMap, openIndex, changeIndex, updateCharacter } = useMapStore();
     <CharactersIndex />
   </div>
 
-   <button
-      v-if="!open"
-     class="open-button"
-     @click="openMap"
-   >"I solemnly swear that I am up to no good."</button>
-   <button
-     v-else
-     class="open-button"
-     @click="openMap"
-   >“mischief managed.”</button>
+  <button
+    class="open-button"
+    @click="openMap"
+  >{{ open ? "mischief managed." : "I solemnly swear that I am up to no good."}}</button>
 
-  <!-- <div class="character-wrap">
-    <h1 class="character-name">Harry Potter</h1>
-    <h3 class="character-info" id="born">31 July 1980</h3>
-    <h3 class="character-info" id="house">Gryffindor</h3>
-  </div> -->
 </template>
 
 <style scoped>
