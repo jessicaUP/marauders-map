@@ -49,10 +49,15 @@ const { openMap, openIndex, changeIndex, updateCharacter } = useMapStore();
   </div>
 
    <button
+      v-if="!open"
      class="open-button"
      @click="openMap"
    >"I solemnly swear that I am up to no good."</button>
-
+   <button
+     v-else
+     class="open-button"
+     @click="openMap"
+   >“mischief managed.”</button>
 
   <!-- <div class="character-wrap">
     <h1 class="character-name">Harry Potter</h1>
