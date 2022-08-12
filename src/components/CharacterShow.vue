@@ -31,8 +31,8 @@ console.log(character._object.character)
   .pentagon {
     display: flex;
     position: fixed;
-    bottom: -90px;
-    left: 25px;
+    top: 145px;
+    right: 25px;
     width: 189px;
     box-sizing: content-box;
     border-width: 175px 63px 0;
@@ -54,8 +54,8 @@ console.log(character._object.character)
   .card-wrap {
     display: flex;
     position: fixed;
-    bottom: 0;
-    left: 25px;
+    top: 45px;
+    right: 25px;
     width: 315px;
     height: 300px;
   }
@@ -72,8 +72,8 @@ console.log(character._object.character)
 
   .character-img {
     position: fixed;
-    bottom: 200px;
-    left: 133px;
+    top: 45px;
+    right: 132px;
     border-radius: 100%;
     width: 100px;
     height: 100px;
