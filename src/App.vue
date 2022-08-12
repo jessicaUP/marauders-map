@@ -61,8 +61,8 @@ const { openMap, openIndex, changeIndex, updateCharacter } = useMapStore();
 
   #open {
     position: fixed;
-    top: 10px;
-    left: 10px;
+    bottom: 10px;
+    right: 10px;
     color: maroon;
     font-size: 25px;
   }
