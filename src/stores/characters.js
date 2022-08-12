@@ -10,11 +10,11 @@ export const useCharacterStore = defineStore({
 
   }),
   getters: {
-    getCharacterByName: (state) => state.counter * 2
+    getCharacterByName: (state) => {
+      return (name) => state.characters.filter((character) => character.name === `%${character.toUpperCase()}%`)
+    }
   },
   actions: {
-    increment() {
-      this.counter++
-    }
+
   }
 })
