@@ -12,7 +12,7 @@ fetchCharacters();
 let open = false;
 function openMap () {
   open = true;
-  console.log(true)
+  console.log(true, open)
 };
 
 
@@ -40,8 +40,9 @@ function openMap () {
       />
   </div> -->
 
-  <div class="index-wrap" v-if="open">
     <CharactersIndex />
+  <div class="index-wrap" v-if="open">
+    
   </div>
 
   <div class="open-wrap">
