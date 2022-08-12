@@ -63,8 +63,10 @@ console.log(character._object.character)
   }
 
   .character-img {
-    width: 50px;
-    height: 50px;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
   }
 
 
