@@ -10,14 +10,6 @@ export const useCharacterStore = defineStore({
     errors: []
 
   }),
-  // getters: {
-  //   getCharacterByName: (state) => {
-  //     return (name, group) => {
-  //       const fixName = name.toUpperCase()
-  //       return state[group].filter((character) => character.name.toUpperCase() === `${fixName}`)[0];
-  //     }
-  //   }
-  // },
   actions: {
     async fetchCharacters() {
       this.staff = [];
@@ -38,10 +30,7 @@ export const useCharacterStore = defineStore({
         if (loadCount === 2) this.loading = false;
 
         const final = {};
-        students.forEach((student) => {
-          // const keyName = student.name.split(' ').join('');
-          final[student.name] = student;
-        })
+        students.forEach((student) => final[student.name] = student)
         this.students = final;
       }
 
@@ -55,10 +44,7 @@ export const useCharacterStore = defineStore({
         if (loadCount === 2) this.loading = false;
 
         const final = {};
-        staff.forEach((character) => {
-          // const keyName = character.name.split(' ').join('');
-          final[character.name] = character;
-        })
+        staff.forEach((character) => final[character.name] = character)
         this.staff = final;
       }
 
