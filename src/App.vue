@@ -5,15 +5,24 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
   <header>
 
-    <div class="wrapper">
+    <!-- <div class="wrapper">
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
-    </div>
+    </div> -->
   </header>
 
   <RouterView />
+  <div class="search">
+    <input type="text" class="search-bar" placeholder="Search a Wizard..." />
+  </div>
+
+  <div class="character-wrap">
+    <h1 class="character-name">Harry Potter</h1>
+    <h3 class="character-info" id="born">31 July 1980</h3>
+    <h3 class="character-info" id="house">Gryffindor</h3>
+  </div>
 </template>
 
 <style scoped>
