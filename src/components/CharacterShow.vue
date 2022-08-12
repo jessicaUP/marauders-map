@@ -3,10 +3,8 @@ import { storeToRefs } from 'pinia';
 import { useCharacterStore } from '../stores/characters';
 import { useMapStore } from '../stores/map';
 
-const { staff, students } = storeToRefs(useCharacterStore());
-const { getCharacterByName, updateCharacter } = useCharacterStore();
-
-const { character } = storeToRefs(useMapStore());
+const { staff, students, character } = storeToRefs(useCharacterStore());
+const { updateCharacter } = useCharacterStore();
 
 updateCharacter('Harry Potter', 'students');
 
