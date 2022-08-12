@@ -1,5 +1,23 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+export default {
+  name: 'marauders-map',
+  data () {
+    return {
+      url_base: 'https://legacy--api.herokuapp.com/api/v1',
+      query: '',
+      character: {}
+    }
+  },
+  methods: {
+    fetchCharacter (e) {
+      fetch(`${this.api_base}character?q=${this.query}`)
+        .then(res => {
+          return 
+        })
+    }
+  }
+}
 </script>
 
 <template>
@@ -15,10 +33,15 @@ import { RouterLink, RouterView } from 'vue-router'
 
   <RouterView />
   <div class="search">
-    <input type="text" class="search-bar" placeholder="Search a Wizard..." />
+    <input type="text"
+      class="search-bar"
+      placeholder="Search a Wizard..."
+      v-model="query"
+      @keypress="fetchCharacter"
+      />
   </div>
 
-  <div class="character-wrap">
+  <div class="character-wrap" >
     <h1 class="character-name">Harry Potter</h1>
     <h3 class="character-info" id="born">31 July 1980</h3>
     <h3 class="character-info" id="house">Gryffindor</h3>
