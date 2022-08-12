@@ -55,7 +55,7 @@ console.log(character._object.character)
     display: flex;
     position: fixed;
     bottom: 0;
-    left: 0;
+    left: 25px;
     width: 315px;
     height: 300px;
   }
@@ -64,10 +64,10 @@ console.log(character._object.character)
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: fixed;
-    left: 60px;
-    bottom: 30px;
-    width: 250px
+    position: relative;
+    left: 0;
+    top: 95px;
+    width:315px
   }
 
   .character-img {
