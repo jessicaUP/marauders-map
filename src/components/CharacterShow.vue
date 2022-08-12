@@ -7,17 +7,23 @@ import { useMapStore } from '../stores/map';
 const { staff, students } = storeToRefs(useCharacterStore());
 const { getCharacterByName } = useCharacterStore();
 
-const { character } = storeToRefs(useMapStore());
 const { updateCharacter } = useMapStore();
+const { character } = storeToRefs(useMapStore());
 
 const current = getCharacterByName('Harry Potter', 'students');
 updateCharacter(current);
+
 
 
 </script>
 
 <template>
   <div class="character-wrap" v-if="character">
-    <p key="character.name">{{ character.name }}</p>
+    <h2 key="character.name">{{ character.name }}</h2>
   </div>
 </template>
+
+<style>
+
+
+</style>

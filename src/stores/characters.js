@@ -14,8 +14,7 @@ export const useCharacterStore = defineStore({
     getCharacterByName: (state) => {
       return (name, group) => {
         const fixName = name.toUpperCase()
-        console.log(fixName)
-        return state[group].filter((character) => character.name.toUpperCase() === `%${fixName}%`)
+        return state[group].filter((character) => character.name.toUpperCase() === `${fixName}`)[0];
       }
     }
   },
