@@ -2,12 +2,18 @@
 import { storeToRefs } from 'pinia';
 import { RouterLink, RouterView } from 'vue-router'
 import { useCharacterStore } from './stores/characters'
-import CharactersView from './views/CharactersView.vue'
+import CharactersIndex from './components/CharactersIndex.vue'
 
 
 // const { staff, students, character, loading, errors } = storeToRefs(useCharacterStore());
 const { fetchCharacters } = useCharacterStore();
 fetchCharacters();
+
+let open = false;
+function openMap () {
+  open = true;
+  console.log(true)
+};
 
 
 </script>
@@ -34,12 +40,14 @@ fetchCharacters();
       />
   </div> -->
 
-  <CharactersView/>
+  <div class="index-wrap" v-if="open">
+    <CharactersIndex />
+  </div>
 
   <div class="open-wrap">
     <button
       class="open-button"
-      @click="fetchCharacters"
+      @click="openMap"
     >"I solemnly swear that I am up to no good."</button>
   </div>
 
