@@ -3,10 +3,11 @@ import { defineStore } from 'pinia'
 export const useCharacterStore = defineStore({
   id: 'character',
   state: () => ({
-    characters: [],
+    staff: [],
+    students: [],
     character: null,
     loading: false,
-    error: null
+    errors: []
 
   }),
   getters: {
@@ -15,6 +16,32 @@ export const useCharacterStore = defineStore({
     }
   },
   actions: {
+    async fetchCharacters() {
+      this.staff = [];
+      this.students = [];
+      this.errors = [];
+      let loadCount = 0;
 
+      this.loading = true;
+      try {
+        this.staff = await fetch('http://hp-api.herokuapp.com/api/characters/staff')
+          .then((res) => res.json());
+      } catch (error) {
+        this.errors.push(error);
+      } finally {
+        loadCount++;
+        if (loadCount === 2) this.loading = false;
+      }
+
+      try {
+        this.students = await fetch('http://hp-api.herokuapp.com/api/characters/students')
+          .then((res) => res.json());
+      } catch (error) {
+        this.errors.push(error);
+      } finally {
+        loadCount++;
+        if (loadCount === 2) this.loading = false;
+      }
+    }
   }
 })
