@@ -2,7 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 
 function fetchCharacters(e) {
-  fetch('http://hp-api.herokuapp.com/api/characters')
+  fetch('https://hp-api.herokuapp.com/api/characters')
     .then(res => {
       const jsonRes = res.json();
       console.log(jsonRes);
