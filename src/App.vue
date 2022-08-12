@@ -49,21 +49,21 @@ const { openMap, openIndex, changeIndex, updateCharacter } = useMapStore();
   </div>
 
   <button
-    class="open-button"
+    class="button"
+    id="open"
     @click="openMap"
   >{{ open ? "mischief managed." : "I solemnly swear that I am up to no good."}}</button>
 
 </template>
 
 <style scoped>
-  .open-button {
+
+
+  #open {
     position: fixed;
     top: 10px;
     left: 10px;
-    background-color: transparent;
     color: maroon;
-    border: none;
-    cursor: pointer;
     font-size: 25px;
   }
 </style>

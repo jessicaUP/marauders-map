@@ -20,6 +20,7 @@ const { changeIndex } = useMapStore();
 
     <div class="character-wrap" v-if="index.group === 'students'">
       <button 
+        class="button list-btn"
         v-if="students" 
         v-for="character in students" 
         :key="character.name"
@@ -28,6 +29,7 @@ const { changeIndex } = useMapStore();
     </div>
     <div class="character-wrap" v-else-if="index.group === 'staff'">
       <button 
+        class="button list-btn"
         v-if="staff" 
         v-for="character in staff" 
         :key="character.name"
@@ -36,3 +38,29 @@ const { changeIndex } = useMapStore();
     </div>
   </div>
 </template>
+
+<style>
+  .index-wrap {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: fit-content;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+
+  .character-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .list-btn {
+    color: lightgray;
+    font-size: 20px;
+    text-align: right;
+  }
+
+</style>
