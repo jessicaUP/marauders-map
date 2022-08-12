@@ -8,7 +8,7 @@ export const useMapStore = defineStore({
       open: false, 
       group: 'students' 
     },
-    character: null,
+    // character: null,
   }),
   actions: {
     openMap() {
@@ -24,8 +24,8 @@ export const useMapStore = defineStore({
     changeIndex(group) {
       this.index.group = group;
     },
-    updateCharacter(info) {
-      this.character = info;
-    }
+    // updateCharacter(info) {
+    //   this.character = info;
+    // }
   }
 })

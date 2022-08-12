@@ -4,13 +4,11 @@ import { useCharacterStore } from '../stores/characters';
 import { useMapStore } from '../stores/map';
 
 const { staff, students } = storeToRefs(useCharacterStore());
-const { getCharacterByName } = useCharacterStore();
+const { getCharacterByName, updateCharacter } = useCharacterStore();
 
-const { updateCharacter } = useMapStore();
 const { character } = storeToRefs(useMapStore());
 
-const current = getCharacterByName('Harry Potter', 'students');
-updateCharacter(current);
+updateCharacter('Harry Potter', 'students');
 
 
 </script>
