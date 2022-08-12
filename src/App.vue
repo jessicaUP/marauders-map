@@ -4,6 +4,7 @@ import { RouterLink, RouterView } from 'vue-router'
 import { useCharacterStore } from './stores/characters'
 import { useMapStore } from './stores/map'
 import CharactersIndex from './components/CharactersIndex.vue'
+import CharacterShow from './components/CharacterShow.vue'
 
 
 // const { staff, students, character, loading, errors } = storeToRefs(useCharacterStore());
@@ -41,7 +42,10 @@ const { openMap, openIndex, changeIndex, updateCharacter } = useMapStore();
 
   <div class="index-wrap" v-if="open">
     <CharactersIndex />
-    
+  </div>
+
+  <div class="character-wrap" v-if="open">
+    <CharacterShow />
   </div>
 
   <div class="open-wrap">
@@ -51,11 +55,11 @@ const { openMap, openIndex, changeIndex, updateCharacter } = useMapStore();
     >"I solemnly swear that I am up to no good."</button>
   </div>
 
-  <div class="character-wrap">
+  <!-- <div class="character-wrap">
     <h1 class="character-name">Harry Potter</h1>
     <h3 class="character-info" id="born">31 July 1980</h3>
     <h3 class="character-info" id="house">Gryffindor</h3>
-  </div>
+  </div> -->
 </template>
 
 <style scoped>

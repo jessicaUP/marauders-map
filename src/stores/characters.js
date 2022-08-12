@@ -12,7 +12,11 @@ export const useCharacterStore = defineStore({
   }),
   getters: {
     getCharacterByName: (state) => {
-      return (name) => state.characters.filter((character) => character.name === `%${character.toUpperCase()}%`)
+      return (name, group) => {
+        const fixName = name.toUpperCase()
+        console.log(fixName)
+        return state[group].filter((character) => character.name.toUpperCase() === `%${fixName}%`)
+      }
     }
   },
   actions: {

@@ -26,8 +26,8 @@ export const useMapStore = defineStore({
     changeIndex(group) {
       this.index.group = group;
     },
-    updateCharacter(name) {
-      this.character = name;
+    updateCharacter(info) {
+      this.character = info;
     }
   }
 })

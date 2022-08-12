@@ -9,11 +9,7 @@ let currentPage = 'students';
 </script>
 
 <template>
-  <main>
     <div class="character-wrap">
       <p v-if="students" v-for="character in students" :key="character.name">{{ character.name }}</p>
-
-
     </div>
-  </main>
 </template>
