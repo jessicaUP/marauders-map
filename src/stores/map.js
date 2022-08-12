@@ -14,7 +14,11 @@ export const useMapStore = defineStore({
   }),
   actions: {
     openMap() {
-      this.open = true;
+      if (this.open) {
+        this.open = false;
+      } else {
+        this.open = true;
+      }
     },
     openIndex() {
       this.index.open = true;

@@ -2,6 +2,7 @@
 import { storeToRefs } from 'pinia';
 import { RouterLink, RouterView } from 'vue-router'
 import { useCharacterStore } from './stores/characters'
+import { useMapStore } from './stores/map'
 import CharactersIndex from './components/CharactersIndex.vue'
 
 
@@ -9,11 +10,9 @@ import CharactersIndex from './components/CharactersIndex.vue'
 const { fetchCharacters } = useCharacterStore();
 fetchCharacters();
 
-let open = false;
-function openMap () {
-  open = true;
-  console.log(true, open)
-};
+const { open, index, character } = storeToRefs(useMapStore());
+const { openMap, openIndex, changeIndex, updateCharacter } = useMapStore();
+
 
 
 </script>
@@ -40,8 +39,8 @@ function openMap () {
       />
   </div> -->
 
-    <CharactersIndex />
   <div class="index-wrap" v-if="open">
+    <CharactersIndex />
     
   </div>
 
