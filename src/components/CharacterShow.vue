@@ -13,13 +13,18 @@ const { character } = storeToRefs(useMapStore());
 const current = getCharacterByName('Harry Potter', 'students');
 updateCharacter(current);
 
-
+console.log(character._object.character)
 
 </script>
 
 <template>
   <div class="character-wrap" v-if="character">
     <h2 key="character.name">{{ character.name }}</h2>
+    <p>{{character.dateOfBirth}}</p>
+    <p>{{character.house}}</p>
+    <p>{{character.gender}}</p>
+    <p>{{character.eyeColour}}</p>
+    <p>{{character.hairColour}}</p>
   </div>
 </template>
 
