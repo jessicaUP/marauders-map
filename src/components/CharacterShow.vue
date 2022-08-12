@@ -8,12 +8,18 @@ const { updateCharacter } = useCharacterStore();
 
 updateCharacter('Harry Potter', 'students');
 
-
+console.log(character._object.character)
 </script>
 
 <template>
   <div class="pentagon">
-    <div class="character-wrap" v-if="character">
+    <div class="show-wrap" v-if="character">
+    <!-- <img :src="{character.image}" alt="" :style="{'background-color':Your_Variable_Name}"> -->
+    
+    <div 
+      class="character-img"
+      :style="{ backgroundImage: `url(${character.image})` }"
+    ></div>
       <h2 key="character.name">{{ character.name }}</h2>
       <p>{{character.dateOfBirth}}</p>
       <p>{{character.house}}</p>
@@ -47,6 +53,18 @@ updateCharacter('Harry Potter', 'students');
     border-width: 0 157.5px 122.5px;
     border-style: solid;
     border-color: transparent transparent rgb(10, 88, 93);
+    
+    
+  }
+
+  .show-wrap {
+    position: relative;
+    top: -200px;
+  }
+
+  .character-img {
+    width: 50px;
+    height: 50px;
   }
 
 

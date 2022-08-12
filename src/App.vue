@@ -40,12 +40,12 @@ const { openMap, openIndex, changeIndex, updateCharacter } = useMapStore();
       />
   </div> -->
 
-  <div class="index-wrap" v-if="open">
-    <CharactersIndex />
-  </div>
-
   <div class="character-wrap" v-if="open">
     <CharacterShow />
+  </div>
+
+  <div class="index-wrap" v-if="open">
+    <CharactersIndex />
   </div>
 
   <div class="open-wrap">
