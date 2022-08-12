@@ -1,14 +1,14 @@
 <script setup>
+import { storeToRefs } from 'pinia';
 import { RouterLink, RouterView } from 'vue-router'
+import { useCharacterStore } from './stores/characters'
 
-function fetchCharacters(e) {
-  fetch('https://hp-api.herokuapp.com/api/characters')
-    .then(res => {
-      const jsonRes = res.json();
-      console.log(jsonRes);
-      return jsonRes;
-    })
-}
+const { staff, students, character, loading, errors } = storeToRefs(useCharacterStore());
+const { fetchCharacters } = useCharacterStore();
+
+fetchCharacters()
+  .then(() => console.log('CHECK', students));
+
 
 </script>
 
