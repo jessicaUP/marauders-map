@@ -46,10 +46,14 @@ const { changeIndex } = useMapStore();
     position: fixed;
     top: 0;
     bottom: 0;
-    right: 0;
+    left: 0;
     width: fit-content;
     overflow: scroll;
-    overflow-x: hidden;
+
+  }
+
+  .index-wrap::-webkit-scrollbar {
+    display: none;
   }
 
   .character-wrap {
@@ -60,7 +64,7 @@ const { changeIndex } = useMapStore();
   .list-btn {
     color: lightgray;
     font-size: 20px;
-    text-align: right;
+    text-align: left;
   }
 
 </style>
