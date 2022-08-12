@@ -5,7 +5,7 @@ export const useCharacterStore = defineStore({
   state: () => ({
     staff: [],
     students: [],
-    character: null,
+    // character: null,
     loading: false,
     errors: []
 

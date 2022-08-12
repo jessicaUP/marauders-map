@@ -9,8 +9,6 @@ export const useMapStore = defineStore({
       group: 'students' 
     },
     character: null,
-    
-
   }),
   actions: {
     openMap() {

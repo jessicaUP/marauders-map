@@ -1,5 +1,4 @@
 <script setup>
-import { RouterLink } from 'vue-router';
 import { storeToRefs } from 'pinia';
 import { useCharacterStore } from '../stores/characters';
 import { useMapStore } from '../stores/map';
@@ -13,7 +12,6 @@ const { character } = storeToRefs(useMapStore());
 const current = getCharacterByName('Harry Potter', 'students');
 updateCharacter(current);
 
-console.log(character._object.character)
 
 </script>
 
