@@ -52,7 +52,7 @@ const { openMap, openIndex, changeIndex, updateCharacter } = useMapStore();
     class="button"
     id="open"
     @click="openMap"
-  >{{ open ? "mischief managed." : "I solemnly swear that I am up to no good."}}</button>
+  >{{ open ? "...mischief managed" : "I solemnly swear that I am up to no good..."}}</button>
 
 </template>
 
