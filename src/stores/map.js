@@ -31,15 +31,20 @@ export const useMapStore = defineStore({
     changeIndex(group) {
       this.index.group = group;
     },
-    openShow() {
+    openShow(close = ) {
       if (this.show.open) {
         this.show.open = false;
       } else {
         this.show.open = true;
+        this.show.side = 'info';
       }
     },
-    changeShow(side) {
-      this.show.side = side;
+    changeShow() {
+      if (this.show.side === 'picture') {
+        this.show.side = 'info';
+      } else {
+        this.show.side = 'picture';
+      }
     },
   }
 })

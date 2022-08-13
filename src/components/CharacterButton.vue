@@ -7,11 +7,14 @@ import { useMapStore } from '../stores/map';
 const { updateCharacter } = useCharacterStore();
 
 const { show } = storeToRefs(useMapStore());
-const { openShow } = useMapStore();
+const { openShow, changeShow } = useMapStore();
 
 const handleClick = (name, group, show) => {
   if (!show.open) {
     openShow();
+  }
+  if (show.side !== 'info') {
+    changeShow();
   }
   updateCharacter(name, group);
 }

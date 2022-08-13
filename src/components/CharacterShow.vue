@@ -8,7 +8,8 @@ import { useRoute } from 'vue-router';
 const { character } = storeToRefs(useCharacterStore());
 const { updateCharacter } = useCharacterStore();
 
-const { openShow } = useMapStore();
+const { show } = storeToRefs(useMapStore());
+const { openShow, changeShow } = useMapStore();
 
 const route = useRoute();
 let { name, group } = route.params;
@@ -19,20 +20,26 @@ updateCharacter(name, group);
 
 <template>
   <button 
+    v-if="character.image"
     class="show-btn" 
     id="flip"
-  >Flip</button>
+    @click="changeShow()"
+  >⤻</button>
 
   <button 
     class="show-btn" 
     id="close"
-    @click="openShow()"
-  >Close</button>
+    @click="openShow(true)"
+  >✕</button>
 
   <div class="pentagon"></div>
   <div class="card-wrap">
-    <div class="character-img" :style="{ backgroundImage: `url(${character.image})` }"></div>
-    <div class="info">
+    <div 
+      v-if="show.side === 'picture'"
+      class="character-img" 
+      :style="{ backgroundImage: `url(${character.image})` }"
+    ></div>
+    <div v-else class="info">
       <h1 key="character.name">{{ character.name }}</h1>
       <p>{{character.dateOfBirth}}</p>
       <p>{{character.house}}</p>
@@ -79,17 +86,27 @@ updateCharacter(name, group);
 
   .show-btn {
     position: fixed;
-
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    font-size: 18px;
+    color: white;
+    background-color: darkcyan;
+    border: none;
+    z-index: 1;
   }
 
   #close {
-    top: 0;
-    right: 0;
+    top: 285px;
+    right: 35px;
+
   }
 
   #flip {
-    top: 25px;
-    right: 0;
+    top: 240px;
+    right: 17px;
+    font-size: 25px;
+    transform: rotate(-40deg);
   }
 
   .info {
@@ -98,17 +115,17 @@ updateCharacter(name, group);
     align-items: center;
     position: relative;
     left: 0;
-    top: 95px;
+    top: 85px;
     width:315px
   }
 
   .character-img {
     position: fixed;
-    top: 45px;
-    right: 132px;
+    top: 80px;
+    right: 70px;
     border-radius: 100%;
-    width: 100px;
-    height: 100px;
+    width: 225px;
+    height: 225px;
     background-size: cover;
   }
 
