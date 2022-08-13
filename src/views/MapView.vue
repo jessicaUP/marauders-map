@@ -3,6 +3,7 @@ import { storeToRefs } from 'pinia';
 import { RouterLink, RouterView, useRoute } from 'vue-router';
 // import { useCharacterStore } from './stores/characters';
 import { useMapStore } from '../stores/map';
+import { useCharacterStore } from '../stores/characters';
 import CharactersIndex from '../components/CharactersIndex.vue';
 import CharacterShow from '../components/CharacterShow.vue';
 
@@ -10,9 +11,13 @@ import CharacterShow from '../components/CharacterShow.vue';
 const { open, index, character } = storeToRefs(useMapStore());
 const { openMap, openIndex, changeIndex } = useMapStore();
 
-const route = useRoute();
-let params = route.params.character;
-console.log('ROUTE', route.params) 
+const { updateCharacter } = useCharacterStore();
+
+// const route = useRoute();
+// let { name, group } = route.params;
+// console.log('ROUTE', route.params) 
+
+// updateCharacter(name, group);
 
 </script>
 

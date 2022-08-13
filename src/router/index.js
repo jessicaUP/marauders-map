@@ -11,8 +11,8 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/:character',
-      name: 'character',
+      path: '/:group/:name',
+      name: 'map',
       component: MapView
     }
   ]

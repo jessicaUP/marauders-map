@@ -2,11 +2,20 @@
 import { storeToRefs } from 'pinia';
 import { useCharacterStore } from '../stores/characters';
 import { useMapStore } from '../stores/map';
+import { RouterLink, RouterView, useRoute } from 'vue-router';
+
 
 const { staff, students, character } = storeToRefs(useCharacterStore());
 const { updateCharacter } = useCharacterStore();
 
-updateCharacter('Harry Potter', 'students');
+
+const route = useRoute();
+let { name, group } = route.params;
+console.log('ROUTE', route.params)
+
+updateCharacter(name, group);
+
+// updateCharacter('Harry Potter', 'students');
 
 console.log(character._object.character)
 </script>

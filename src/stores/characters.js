@@ -50,7 +50,10 @@ export const useCharacterStore = defineStore({
 
     },
     updateCharacter(name, group) {
-      this.character = this[group][name];
+      let key = name.split(' ').map((word) => word[0].toUpperCase() + word.slice(1)).join(' ');
+
+      console.log('KEY', this[group][key])
+      this.character = this[group][key];
     }
   }
 })

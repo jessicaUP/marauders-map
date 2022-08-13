@@ -8,7 +8,7 @@ const { openMap, openIndex, changeIndex } = useMapStore();
 
 <template>
   <router-link
-    to="/harry potter"
+    to="students/harry potter"
     class="button"
     id="open"
   >"I solemnly swear that I am up to no good..."</router-link>
