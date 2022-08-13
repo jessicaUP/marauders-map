@@ -3,8 +3,9 @@ import { defineStore } from 'pinia'
 export const useCharacterStore = defineStore({
   id: 'character',
   state: () => ({
-    staff: [],
-    students: [],
+    staff: {},
+    students: {},
+    liveCharacters: [],
     character: null,
     loading: false,
     errors: []
@@ -12,8 +13,9 @@ export const useCharacterStore = defineStore({
   }),
   actions: {
     async fetchCharacters() {
-      this.staff = [];
-      this.students = [];
+      this.staff = {};
+      this.students = {};
+      this.liveCharacters = [];
       this.errors = [];
       let loadCount = 0;
       let students, staff;
@@ -28,9 +30,16 @@ export const useCharacterStore = defineStore({
       } finally {
         loadCount++;
         if (loadCount === 2) this.loading = false;
-
+        
         const final = {};
+        let count = 15;
         students.forEach((student) => final[student.name] = student)
+
+        for (let character in final) {
+          if (count < 0) break;
+          this.liveCharacters.push(character)
+          count--;
+        }
         this.students = final;
       }
 
@@ -44,7 +53,14 @@ export const useCharacterStore = defineStore({
         if (loadCount === 2) this.loading = false;
 
         const final = {};
+        let count = 11;
         staff.forEach((character) => final[character.name] = character)
+
+        for (let character in final) {
+          if (count < 0) break;
+          this.liveCharacters.push(character)
+          count--;
+        }
         this.staff = final;
       }
 

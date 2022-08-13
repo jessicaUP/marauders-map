@@ -1,7 +1,6 @@
 <script setup>
 import { storeToRefs } from 'pinia';
 import { RouterLink, RouterView, useRoute } from 'vue-router';
-// import { useCharacterStore } from './stores/characters';
 import { useMapStore } from '../stores/map';
 import { useCharacterStore } from '../stores/characters';
 import CharactersIndex from '../components/CharactersIndex.vue';
@@ -9,7 +8,10 @@ import CharacterShow from '../components/CharacterShow.vue';
 
 
 const { open, index, character } = storeToRefs(useMapStore());
+const { liveCharacters } = storeToRefs(useCharacterStore());
 const { openMap, openIndex, changeIndex } = useMapStore();
+
+console.log('LIVE', liveCharacters.liveCharacters)
 
 const { updateCharacter } = useCharacterStore();
 
