@@ -16,13 +16,6 @@ const { staff, students, character, loading, errors } = storeToRefs(useCharacter
 
 <template>
   <header>
-
-    <!-- <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div> -->
   </header>
 
   <div class="load-wrap" v-if="loading">
