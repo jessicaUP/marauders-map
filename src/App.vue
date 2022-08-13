@@ -1,6 +1,7 @@
 <script setup>
 import { useCharacterStore } from './stores/characters'
 import { RouterView } from 'vue-router';
+import Loading from './components/Loading.vue';
 
 
 // const { staff, students, character, loading, errors } = storeToRefs(useCharacterStore());
@@ -24,6 +25,7 @@ fetchCharacters();
   </header>
 
   <RouterView />
+  <Loading />
 
 
 </template>
