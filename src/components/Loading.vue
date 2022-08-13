@@ -16,7 +16,6 @@ import { useCharacterStore } from '../stores/characters';
 
 <style>
 .loader {
-  display: inline-block;
   transform: rotate(-45deg);
   width: 200px;
   height: 200px;
