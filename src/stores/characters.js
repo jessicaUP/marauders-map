@@ -1,11 +1,14 @@
 import { defineStore } from 'pinia'
+import { movingCharacters } from '../assets/movingCharacters';
+
+console.log(movingCharacters)
 
 export const useCharacterStore = defineStore({
   id: 'character',
   state: () => ({
     staff: {},
     students: {},
-    liveCharacters: [],
+    liveCharacters: movingCharacters,
     character: null,
     loading: false,
     errors: []
@@ -15,12 +18,12 @@ export const useCharacterStore = defineStore({
     async fetchCharacters() {
       this.staff = {};
       this.students = {};
-      this.liveCharacters = [];
       this.errors = [];
       let loadCount = 0;
+      this.loading = true;
+
       let students, staff;
 
-      this.loading = true;
 
       try {
         students = await fetch('http://hp-api.herokuapp.com/api/characters/students')
@@ -30,17 +33,8 @@ export const useCharacterStore = defineStore({
       } finally {
         loadCount++;
         if (loadCount === 2) this.loading = false;
-        
-        const final = {};
-        let count = 15;
-        students.forEach((student) => final[student.name] = student)
-
-        for (let character in final) {
-          if (count < 0) break;
-          this.liveCharacters.push({ name: character, group: 'students' })
-          count--;
-        }
-        this.students = final;
+ 
+        students.forEach((student) => this.students[student.name] = student)
       }
 
       try {
@@ -51,17 +45,8 @@ export const useCharacterStore = defineStore({
       } finally {
         loadCount++;
         if (loadCount === 2) this.loading = false;
-
-        const final = {};
-        let count = 11;
-        staff.forEach((character) => final[character.name] = character)
-
-        for (let character in final) {
-          if (count < 0) break;
-          this.liveCharacters.push({ name: character, group: 'staff' })
-          count--;
-        }
-        this.staff = final;
+        
+        staff.forEach((character) => this.staff[character.name] = character)
       }
 
     },

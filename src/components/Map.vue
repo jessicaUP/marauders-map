@@ -3,8 +3,7 @@ import { useCharacterStore } from '../stores/characters';
 import { useMapStore } from '../stores/map';
 import { storeToRefs } from 'pinia';
 import CharacterButton from './CharacterButton.vue';
-
-const { liveCharacters } = storeToRefs(useCharacterStore());
+import { movingCharacters } from '../assets/movingCharacters'
 
 
 </script>
@@ -15,7 +14,7 @@ const { liveCharacters } = storeToRefs(useCharacterStore());
   <div class="character-map">
     <div 
       class="moving-icon" 
-      v-for="character of liveCharacters"
+      v-for="character of movingCharacters"
       :id="character.name.split(' ').join('') + '-move'"
     >
       <CharacterButton 
