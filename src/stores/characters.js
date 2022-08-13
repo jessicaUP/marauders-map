@@ -37,7 +37,7 @@ export const useCharacterStore = defineStore({
 
         for (let character in final) {
           if (count < 0) break;
-          this.liveCharacters.push(character)
+          this.liveCharacters.push({ name: character, group: 'students' })
           count--;
         }
         this.students = final;
@@ -58,7 +58,7 @@ export const useCharacterStore = defineStore({
 
         for (let character in final) {
           if (count < 0) break;
-          this.liveCharacters.push(character)
+          this.liveCharacters.push({ name: character, group: 'staff' })
           count--;
         }
         this.staff = final;

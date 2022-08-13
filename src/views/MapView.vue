@@ -5,6 +5,7 @@ import { useMapStore } from '../stores/map';
 import { useCharacterStore } from '../stores/characters';
 import CharactersIndex from '../components/CharactersIndex.vue';
 import CharacterShow from '../components/CharacterShow.vue';
+import Map from '../components/Map.vue';
 
 
 const { open, index, character } = storeToRefs(useMapStore());
@@ -25,15 +26,9 @@ const { updateCharacter } = useCharacterStore();
 
 <template>
   <main>
-    <!-- <RouterView /> -->
-    <!-- <div class="search">
-    <input type="text"
-      class="search-bar"
-      placeholder="Search a Wizard..."
-      v-model="query"
-      @keypress="fetchCharacter"
-      />
-  </div> -->
+
+
+    <Map />
 
     <div class="character-wrap">
       <CharacterShow />
@@ -46,7 +41,7 @@ const { updateCharacter } = useCharacterStore();
       <CharactersIndex />
     </div>
 
-    
+
 
 
 
