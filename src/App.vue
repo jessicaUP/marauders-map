@@ -1,13 +1,14 @@
 <script setup>
-import { useCharacterStore } from './stores/characters'
 import { RouterView } from 'vue-router';
+import { storeToRefs } from 'pinia';
+import { useCharacterStore } from './stores/characters'
 import Loading from './components/Loading.vue';
 
 
-// const { staff, students, character, loading, errors } = storeToRefs(useCharacterStore());
 const { fetchCharacters } = useCharacterStore();
-fetchCharacters();
+fetchCharacters()
 
+const { staff, students, character, loading, errors } = storeToRefs(useCharacterStore());
 
 
 </script>
@@ -24,8 +25,12 @@ fetchCharacters();
     </div> -->
   </header>
 
-  <RouterView />
-  <Loading />
+  <div class="load-wrap" v-if="loading">
+    <Loading />
+  </div>
+  <div class="content-wrap" v-else >
+    <RouterView />
+  </div>
 
 
 </template>
