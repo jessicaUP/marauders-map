@@ -1,12 +1,4 @@
 <script setup>
-import { storeToRefs } from 'pinia';
-import { useCharacterStore } from '../stores/characters';
-
-
-// const { staff, students } = storeToRefs(useCharacterStore());
-
-// const { index } = storeToRefs(useMapStore());
-// const { changeIndex } = useMapStore();
 
 </script>
 
@@ -31,8 +23,5 @@ import { useCharacterStore } from '../stores/characters';
     transform: rotateY(360deg) rotate(-45deg);
   }
 }
-
-
-
 
 </style>
