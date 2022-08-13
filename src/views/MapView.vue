@@ -92,13 +92,13 @@ const handleMenu = (group, index) => {
 
 #true-staff {
   left: 175px;
-  top: 200px;
+  top: 190px;
   background-color: red;
 }
 
 #false-staff {
   left: -50px;
-  top: 200px;
+  top: 190px;
   background-color: red;
 }
 
