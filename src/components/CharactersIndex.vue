@@ -10,6 +10,12 @@ const { getCharacterByName, updateCharacter } = useCharacterStore();
 const { index } = storeToRefs(useMapStore());
 const { changeIndex } = useMapStore();
 
+const handleClick = (e) => {
+  return (name, group) => {
+    updateCharacter(name, group);
+  }
+}
+
 </script>
 
 <template>
@@ -18,22 +24,32 @@ const { changeIndex } = useMapStore();
     <button class="staff" @click="changeIndex('staff')">Staff</button>
 
     <div class="character-wrap" v-if="index.group === 'students'">
-      <button 
-        class="button list-btn"
-        v-if="students" 
+      <div 
         v-for="character in students" 
-        :key="character.name"
+        :id="character.name + '-button'"
+        class="character-name"
         @click="updateCharacter(character.name, 'students')"
-      >{{ character.name }}</button>
+        >
+        <router-link 
+          class="button list-btn"
+          :to="{ path: '/students/' + character.name}"
+          :key="character.name"
+        >{{ character.name }}</router-link>
+      </div>
     </div>
     <div class="character-wrap" v-else-if="index.group === 'staff'">
-      <button 
-        class="button list-btn"
-        v-if="staff" 
+      <div 
         v-for="character in staff" 
-        :key="character.name"
+        :id="character.name + '-button'"
+        class="character-name"
         @click="updateCharacter(character.name, 'staff')"
-      >{{ character.name }}</button>
+        >
+        <router-link 
+          class="button list-btn"
+          :to="{ path: '/staff/' + character.name}"
+          :key="character.name"
+        >{{ character.name }}</router-link>
+      </div>
     </div>
   </div>
 </template>

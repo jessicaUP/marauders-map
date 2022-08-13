@@ -14,11 +14,6 @@ const router = createRouter({
       path: '/:group/:name',
       name: 'character',
       component: MapView
-    },
-    {
-      path: '/:group',
-      name: 'group',
-      component: MapView
     }
   ]
 })
