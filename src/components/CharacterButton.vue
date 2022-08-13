@@ -4,16 +4,18 @@ import { storeToRefs } from 'pinia';
 import { useCharacterStore } from '../stores/characters';
 import { useMapStore } from '../stores/map';
 
-const { staff, students } = storeToRefs(useCharacterStore());
+const { staff, students, character } = storeToRefs(useCharacterStore());
 const { updateCharacter } = useCharacterStore();
 
-const { changeIndex } = useMapStore();
+const { show } = storeToRefs(useMapStore());
+const { changeIndex, openShow } = useMapStore();
 
-const handleClick = (e) => {
-  return (name, group) => {
-    updateCharacter(name, group);
-    changeIndex(group);
+const handleClick = (name, group, show) => {
+  console.log('CHECK', show._object)
+  if (!show.open) {
+    openShow();
   }
+  updateCharacter(name, group);
 }
 
 const props = defineProps({
@@ -34,7 +36,7 @@ const props = defineProps({
       <div 
         :id="props.name + '-button'" 
         class="character-name"
-        @click="updateCharacter(props.name, props.group)">
+        @click="handleClick(props.name, props.group, show)">
         <router-link 
           class="button list-btn" 
           :to="{ path: '/' + props.group + '/' + props.name }" 

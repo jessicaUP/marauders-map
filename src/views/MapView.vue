@@ -8,24 +8,23 @@ import CharacterShow from '../components/CharacterShow.vue';
 import Map from '../components/Map.vue';
 
 
-const { open, index, character } = storeToRefs(useMapStore());
+const { index, show } = storeToRefs(useMapStore());
 const { openMap, openIndex, changeIndex } = useMapStore();
 
 const { liveCharacters } = storeToRefs(useCharacterStore());
 const { updateCharacter } = useCharacterStore();
 
+console.log('SHOW', show._object.show)
+
 const handleMenu = (group, index) => {
   console.log(index.open)
   if (index.open) {
     if (group === index.group) {
-      console.log('B')
       openIndex();
     } else {
-      console.log('C')
       changeIndex(group);
     }
   } else {
-    console.log('A')
     openIndex();
     changeIndex(group)
   }
@@ -39,7 +38,7 @@ const handleMenu = (group, index) => {
 
     <Map />
 
-    <div class="show-wrap">
+    <div class="show-wrap" v-if="show.open">
       <CharacterShow />
     </div>
 

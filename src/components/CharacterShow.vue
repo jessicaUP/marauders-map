@@ -8,6 +8,11 @@ import { RouterLink, RouterView, useRoute } from 'vue-router';
 const { staff, students, character } = storeToRefs(useCharacterStore());
 const { updateCharacter } = useCharacterStore();
 
+const { show } = storeToRefs(useMapStore());
+const { openShow, changeShow } = useMapStore();
+
+
+
 
 const route = useRoute();
 let { name, group } = route.params;
@@ -20,6 +25,17 @@ console.log(character._object.character)
 </script>
 
 <template>
+  <button 
+    class="show-btn" 
+    id="flip"
+  >Flip</button>
+
+  <button 
+    class="show-btn" 
+    id="close"
+    @click="openShow()"
+  >Close</button>
+
   <div class="pentagon"></div>
   <div class="card-wrap">
     <div class="character-img" :style="{ backgroundImage: `url(${character.image})` }"></div>
@@ -66,6 +82,21 @@ console.log(character._object.character)
     right: 25px;
     width: 315px;
     height: 300px;
+  }
+
+  .show-btn {
+    position: fixed;
+
+  }
+
+  #close {
+    top: 0;
+    right: 0;
+  }
+
+  #flip {
+    top: 25px;
+    right: 0;
   }
 
   .info {
