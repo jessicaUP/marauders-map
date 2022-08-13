@@ -53,7 +53,8 @@ const handleClick = (e) => {
     top: 0;
     bottom: 0;
     left: 0;
-    width: fit-content;
+    background-color: maroon;
+    width: 225px;
     overflow: scroll;
 
   }
