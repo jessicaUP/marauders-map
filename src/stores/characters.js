@@ -1,14 +1,11 @@
 import { defineStore } from 'pinia'
 import { movingCharacters } from '../assets/movingCharacters';
 
-console.log(movingCharacters)
-
 export const useCharacterStore = defineStore({
   id: 'character',
   state: () => ({
     staff: {},
     students: {},
-    liveCharacters: movingCharacters,
     character: null,
     loading: false,
     errors: []
@@ -45,7 +42,7 @@ export const useCharacterStore = defineStore({
       } finally {
         loadCount++;
         if (loadCount === 2) this.loading = false;
-        
+
         staff.forEach((character) => this.staff[character.name] = character)
       }
 
