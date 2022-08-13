@@ -41,6 +41,8 @@ const { updateCharacter } = useCharacterStore();
       <CharactersIndex />
     </div>
 
+    <router-link to="/" class="button" id="open">"...mischief managed"</router-link>
+
 
 
 

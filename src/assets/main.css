@@ -39,3 +39,11 @@ a,
   border: none;
   cursor: pointer;
 }
+
+  #open {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: maroon;
+    font-size: 25px;
+  }

@@ -15,7 +15,6 @@ console.log('ROUTE', route.params)
 
 updateCharacter(name, group);
 
-// updateCharacter('Harry Potter', 'students');
 
 console.log(character._object.character)
 </script>

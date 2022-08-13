@@ -12,7 +12,12 @@ const router = createRouter({
     },
     {
       path: '/:group/:name',
-      name: 'map',
+      name: 'character',
+      component: MapView
+    },
+    {
+      path: '/:group',
+      name: 'group',
       component: MapView
     }
   ]

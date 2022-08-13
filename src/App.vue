@@ -1,11 +1,13 @@
 <script setup>
 import { useCharacterStore } from './stores/characters'
 import { RouterView } from 'vue-router';
+import { createDOMCompilerError } from '@vue/compiler-dom';
 
 
 // const { staff, students, character, loading, errors } = storeToRefs(useCharacterStore());
 const { fetchCharacters } = useCharacterStore();
 fetchCharacters();
+
 
 // if (params) {
 //   openMap();
@@ -37,13 +39,7 @@ fetchCharacters();
 <style scoped>
 
 
-  #open {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    color: maroon;
-    font-size: 25px;
-  }
+
 </style>
 
 

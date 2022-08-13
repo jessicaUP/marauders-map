@@ -10,7 +10,6 @@ const { getCharacterByName, updateCharacter } = useCharacterStore();
 const { index } = storeToRefs(useMapStore());
 const { changeIndex } = useMapStore();
 
- console
 </script>
 
 <template>
