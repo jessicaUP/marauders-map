@@ -3,6 +3,8 @@ import { RouterLink } from 'vue-router';
 import { storeToRefs } from 'pinia';
 import { useCharacterStore } from '../stores/characters';
 import { useMapStore } from '../stores/map';
+import CharacterButton from './CharacterButton.vue';
+
 
 const { staff, students, character } = storeToRefs(useCharacterStore());
 const { getCharacterByName, updateCharacter } = useCharacterStore();
@@ -17,6 +19,8 @@ const handleClick = (e) => {
   }
 }
 
+
+
 </script>
 
 <template>
@@ -25,32 +29,18 @@ const handleClick = (e) => {
     <button class="staff" @click="changeIndex('staff')">Staff</button>
 
     <div class="character-wrap" v-if="index.group === 'students'">
-      <div 
+      <CharacterButton 
         v-for="character in students" 
-        :id="character.name + '-button'"
-        class="character-name"
-        @click="updateCharacter(character.name, 'students')"
-        >
-        <router-link 
-          class="button list-btn"
-          :to="{ path: '/students/' + character.name}"
-          :key="character.name"
-        >{{ character.name }}</router-link>
-      </div>
+        :name="character.name"
+        group="students"
+      />
     </div>
     <div class="character-wrap" v-else-if="index.group === 'staff'">
-      <div 
+      <CharacterButton 
         v-for="character in staff" 
-        :id="character.name + '-button'"
-        class="character-name"
-        @click="updateCharacter(character.name, 'staff')"
-        >
-        <router-link 
-          class="button list-btn"
-          :to="{ path: '/staff/' + character.name}"
-          :key="character.name"
-        >{{ character.name }}</router-link>
-      </div>
+        :name="character.name"
+        group="staff"
+      />
     </div>
   </div>
 </template>

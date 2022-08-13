@@ -11,7 +11,7 @@ const { open, index, character } = storeToRefs(useMapStore());
 const { liveCharacters } = storeToRefs(useCharacterStore());
 const { openMap, openIndex, changeIndex } = useMapStore();
 
-console.log('LIVE', liveCharacters.liveCharacters)
+console.log('LIVE', liveCharacters)
 
 const { updateCharacter } = useCharacterStore();
 
@@ -46,10 +46,11 @@ const { updateCharacter } = useCharacterStore();
       <CharactersIndex />
     </div>
 
+    
+
+
+
+
     <router-link to="/" class="button" id="open">"...mischief managed"</router-link>
-
-
-
-
   </main>
 </template>
