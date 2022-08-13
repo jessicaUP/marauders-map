@@ -1,5 +1,4 @@
 import { defineStore } from 'pinia'
-import { movingCharacters } from '../assets/movingCharacters';
 
 export const useCharacterStore = defineStore({
   id: 'character',
@@ -18,7 +17,6 @@ export const useCharacterStore = defineStore({
       this.errors = [];
       let loadCount = 0;
       this.loading = true;
-
       let students, staff;
 
 
@@ -49,7 +47,6 @@ export const useCharacterStore = defineStore({
     },
     updateCharacter(name, group) {
       let key = name.split(' ').map((word) => word[0].toUpperCase() + word.slice(1)).join(' ');
-
       this.character = this[group][key];
     }
   }

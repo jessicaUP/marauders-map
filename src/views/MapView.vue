@@ -1,19 +1,14 @@
 <script setup>
 import { storeToRefs } from 'pinia';
-import { RouterLink, RouterView, useRoute } from 'vue-router';
+import { RouterLink } from 'vue-router';
 import { useMapStore } from '../stores/map';
-import { useCharacterStore } from '../stores/characters';
 import CharactersIndex from '../components/CharactersIndex.vue';
 import CharacterShow from '../components/CharacterShow.vue';
 import Map from '../components/Map.vue';
 
 
 const { index, show } = storeToRefs(useMapStore());
-const { openMap, openIndex, changeIndex } = useMapStore();
-
-const { liveCharacters } = storeToRefs(useCharacterStore());
-const { updateCharacter } = useCharacterStore();
-
+const { openIndex, changeIndex } = useMapStore();
 
 const handleMenu = (group, index) => {
   if (index.open) {
@@ -32,7 +27,6 @@ const handleMenu = (group, index) => {
 
 
 <template>
-
 
     <Map />
 

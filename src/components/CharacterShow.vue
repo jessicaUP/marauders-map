@@ -2,14 +2,13 @@
 import { storeToRefs } from 'pinia';
 import { useCharacterStore } from '../stores/characters';
 import { useMapStore } from '../stores/map';
-import { RouterLink, RouterView, useRoute } from 'vue-router';
+import { useRoute } from 'vue-router';
 
 
-const { staff, students, character } = storeToRefs(useCharacterStore());
+const { character } = storeToRefs(useCharacterStore());
 const { updateCharacter } = useCharacterStore();
 
-const { show } = storeToRefs(useMapStore());
-const { openShow, changeShow } = useMapStore();
+const { openShow } = useMapStore();
 
 const route = useRoute();
 let { name, group } = route.params;

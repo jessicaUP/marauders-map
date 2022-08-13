@@ -8,8 +8,7 @@ import Loading from './components/Loading.vue';
 const { fetchCharacters } = useCharacterStore();
 fetchCharacters()
 
-const { staff, students, character, loading, errors } = storeToRefs(useCharacterStore());
-
+const { loading } = storeToRefs(useCharacterStore());
 
 </script>
 

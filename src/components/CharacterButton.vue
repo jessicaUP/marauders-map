@@ -4,11 +4,10 @@ import { storeToRefs } from 'pinia';
 import { useCharacterStore } from '../stores/characters';
 import { useMapStore } from '../stores/map';
 
-const { staff, students, character } = storeToRefs(useCharacterStore());
 const { updateCharacter } = useCharacterStore();
 
 const { show } = storeToRefs(useMapStore());
-const { changeIndex, openShow } = useMapStore();
+const { openShow } = useMapStore();
 
 const handleClick = (name, group, show) => {
   if (!show.open) {

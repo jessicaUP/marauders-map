@@ -1,9 +1,4 @@
 <script setup>
-import { storeToRefs } from 'pinia';
-import { useMapStore } from '../stores/map';
-
-const { openMap, openIndex, changeIndex } = useMapStore();
-
 </script>
 
 <template>

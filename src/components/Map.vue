@@ -1,7 +1,4 @@
 <script setup>
-import { useCharacterStore } from '../stores/characters';
-import { useMapStore } from '../stores/map';
-import { storeToRefs } from 'pinia';
 import CharacterButton from './CharacterButton.vue';
 import { movingCharacters } from '../assets/movingCharacters'
 

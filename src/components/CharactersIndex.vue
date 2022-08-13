@@ -1,25 +1,11 @@
 <script setup>
-import { RouterLink } from 'vue-router';
 import { storeToRefs } from 'pinia';
 import { useCharacterStore } from '../stores/characters';
 import { useMapStore } from '../stores/map';
 import CharacterButton from './CharacterButton.vue';
 
-
-const { staff, students, character } = storeToRefs(useCharacterStore());
-const { getCharacterByName, updateCharacter } = useCharacterStore();
-
+const { staff, students } = storeToRefs(useCharacterStore());
 const { index } = storeToRefs(useMapStore());
-const { changeIndex } = useMapStore();
-
-const handleClick = (e) => {
-  return (name, group) => {
-    updateCharacter(name, group);
-    changeIndex(group);
-  }
-}
-
-
 
 </script>
 
