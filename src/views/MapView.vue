@@ -14,6 +14,22 @@ const { openMap, openIndex, changeIndex } = useMapStore();
 const { liveCharacters } = storeToRefs(useCharacterStore());
 const { updateCharacter } = useCharacterStore();
 
+const handleMenu = (group, index) => {
+  console.log(index.open)
+  if (index.open) {
+    if (group === index.group) {
+      console.log('B')
+      openIndex();
+    } else {
+      console.log('C')
+      changeIndex(group);
+    }
+  } else {
+    console.log('A')
+    openIndex();
+    changeIndex(group)
+  }
+}
 
 </script>
 
@@ -27,11 +43,23 @@ const { updateCharacter } = useCharacterStore();
       <CharacterShow />
     </div>
 
-    <button
+    <button 
+      class="index-btn"
+      :id="index.open + '-students'"
+      @click="handleMenu('students', index)"
+    >Students</button>
+    <button 
+      class="index-btn" 
+      :id="index.open + '-staff'"
+      @click="handleMenu('staff', index)"
+    >Staff</button>
+
+    <!-- <button
       @click="openIndex"
       class="index-btn"
       :id="index.open + '-index'"
-    >Wizard List</button>
+    >Wizard List</button> -->
+
     <div class="index-wrap" v-if="index.open">
       <CharactersIndex />
     </div>
@@ -46,19 +74,32 @@ const { updateCharacter } = useCharacterStore();
   position: fixed;
   margin: 0;
   transform: rotate(90deg);
-  background-color: maroon;
   font-size: 20px;
-  width: 150px;
+  width: 125px;
   height: 30px;
-  top: 50vh;
+  top: 60px;
 }
 
-#true-index {
-  left: 160px;
+#true-students {
+  left: 175px;
+  background-color: maroon;
 }
 
-#false-index {
-  left: -61px;
+#false-students {
+  left: -50px;
+  background-color: maroon;
+}
+
+#true-staff {
+  left: 175px;
+  top: 200px;
+  background-color: red;
+}
+
+#false-staff {
+  left: -50px;
+  top: 200px;
+  background-color: red;
 }
 
 

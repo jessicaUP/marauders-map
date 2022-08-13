@@ -6,7 +6,7 @@ export const useMapStore = defineStore({
     open: false,
     index: { 
       open: false, 
-      group: 'students', 
+      group: null, 
     },
     // character: null,
   }),

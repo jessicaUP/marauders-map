@@ -25,9 +25,6 @@ const handleClick = (e) => {
 
 <template>
   <div class="index-wrap">
-    <button class="students" @click="changeIndex('students')">Students</button>
-    <button class="staff" @click="changeIndex('staff')">Staff</button>
-
     <div class="character-wrap" v-if="index.group === 'students'">
       <CharacterButton 
         v-for="character in students" 
@@ -35,7 +32,7 @@ const handleClick = (e) => {
         group="students"
       />
     </div>
-    <div class="character-wrap" v-else-if="index.group === 'staff'">
+    <div class="character-wrap" id="staff-wrap" v-else-if="index.group === 'staff'">
       <CharacterButton 
         v-for="character in staff" 
         :name="character.name"
@@ -68,10 +65,16 @@ const handleClick = (e) => {
     flex-direction: column;
   }
 
+  #staff-wrap {
+    background-color: red;
+  }
+
   .list-btn {
     color: lightgray;
     font-size: 20px;
     text-align: left;
   }
+
+
 
 </style>
