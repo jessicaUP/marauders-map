@@ -6,8 +6,6 @@ import CharacterButton from './CharacterButton.vue';
 
 const { liveCharacters } = storeToRefs(useCharacterStore());
 
-console.log('LIVECHAR', liveCharacters)
-
 
 </script>
 

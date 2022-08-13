@@ -11,7 +11,6 @@ const { show } = storeToRefs(useMapStore());
 const { changeIndex, openShow } = useMapStore();
 
 const handleClick = (name, group, show) => {
-  console.log('CHECK', show._object)
   if (!show.open) {
     openShow();
   }

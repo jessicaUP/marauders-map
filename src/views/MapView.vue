@@ -14,10 +14,8 @@ const { openMap, openIndex, changeIndex } = useMapStore();
 const { liveCharacters } = storeToRefs(useCharacterStore());
 const { updateCharacter } = useCharacterStore();
 
-console.log('SHOW', show._object.show)
 
 const handleMenu = (group, index) => {
-  console.log(index.open)
   if (index.open) {
     if (group === index.group) {
       openIndex();
