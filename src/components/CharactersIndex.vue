@@ -13,6 +13,7 @@ const { changeIndex } = useMapStore();
 const handleClick = (e) => {
   return (name, group) => {
     updateCharacter(name, group);
+    changeIndex(group);
   }
 }
 

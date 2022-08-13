@@ -6,7 +6,7 @@ export const useMapStore = defineStore({
     open: false,
     index: { 
       open: false, 
-      group: 'students' 
+      group: 'students', 
     },
     // character: null,
   }),
@@ -19,7 +19,11 @@ export const useMapStore = defineStore({
       }
     },
     openIndex() {
-      this.index.open = true;
+      if (this.index.open) {
+        this.index.open = false;
+      } else {
+        this.index.open = true;
+      }
     },
     changeIndex(group) {
       this.index.group = group;

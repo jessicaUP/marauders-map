@@ -37,7 +37,10 @@ const { updateCharacter } = useCharacterStore();
       <CharacterShow />
     </div>
 
-    <div class="index-wrap">
+    <button
+      @click="openIndex"
+    >Wizard List</button>
+    <div class="index-wrap" v-if="index.open">
       <CharactersIndex />
     </div>
 
