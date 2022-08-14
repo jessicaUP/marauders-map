@@ -50,6 +50,7 @@ updateCharacter(name, group);
     right: 40px;
     width: 360px;
     height: 360px;
+    pointer-events: none;
   }
 
   #front {
@@ -68,6 +69,7 @@ updateCharacter(name, group);
     right: 25px;
     width: 360px;
     height: 300px;
+    pointer-events: none;
   }
 
   .show-btn {
