@@ -79,7 +79,7 @@ updateCharacter(name, group);
     color: tan;
     background-color: rgb(30, 58, 110);
     border: none;
-    z-index: 1;
+    z-index: 2;
 
   }
 

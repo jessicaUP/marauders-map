@@ -45,6 +45,7 @@ import { movingCharacters } from '../assets/movingCharacters'
   background-image: url('../assets/images/map.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  z-index: -1;
 }
 
 .moving-icon {
