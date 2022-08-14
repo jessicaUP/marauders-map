@@ -35,8 +35,8 @@ updateCharacter(name, group);
       <p>{{character.dateOfBirth}}<br v-if="character.dateOfBirth">
         {{character.house}}<br v-if="character.house">
         {{character.gender}}<br v-if="character.gender">
-        Eye: {{character.eyeColour}}<br v-if="character.eyeColour">
-        Hair: {{character.hairColour}}</p>
+        {{character.eyeColour ? 'Eye: ' + character.eyeColour : ''}}<br v-if="character.eyeColour">
+        {{ character.hairColour ? 'Hair: ' + character.hairColour : '' }}</p>
     </div>
   </div>
 </template>
@@ -101,9 +101,10 @@ updateCharacter(name, group);
     flex-direction: column;
     align-items: center;
     position: relative;
-    left: 0;
+    left: 93px;
     top: 118px;
-    width: 360px;
+    width: 150px;
+    height: fit-content;
 
   }
 
@@ -111,6 +112,7 @@ updateCharacter(name, group);
     font-family: var(--font-title);
     font-size: 20px;
     color: var(--color-white);
+    text-align: center;
   }
 
   .info > p {
