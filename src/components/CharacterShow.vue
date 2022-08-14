@@ -61,29 +61,6 @@ updateCharacter(name, group);
     z-index: 1;
   }
 
-  .pentagon {
-    display: flex;
-    position: fixed;
-    top: 145px;
-    right: 25px;
-    width: 189px;
-    box-sizing: content-box;
-    border-width: 175px 63px 0;
-    border-style: solid;
-    border-color: rgb(10, 88, 93) transparent;
-  }
-
-  .pentagon:before {
-    content: "";
-    top: -297.5px;
-    left: -63px;
-    border-width: 0 157.5px 122.5px;
-    border-style: solid;
-    border-color: transparent transparent rgb(10, 88, 93);
-    
-    
-  }
-
   .card-wrap {
     display: flex;
     position: fixed;
@@ -103,6 +80,7 @@ updateCharacter(name, group);
     background-color: rgb(30, 58, 110);
     border: none;
     z-index: 1;
+
   }
 
   #close {

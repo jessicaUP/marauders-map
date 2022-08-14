@@ -28,6 +28,25 @@ import { movingCharacters } from '../assets/movingCharacters'
 </template>
 
 <style>
+
+.map {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: scroll;
+}
+
+.character-map {
+  width: 2000px;
+  height: 1361px;
+  /* aspect-ratio: 5460 / 2965; */
+  background-image: url('../assets/images/map.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .moving-icon {
   width: fit-content;
 }
