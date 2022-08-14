@@ -61,6 +61,44 @@ const handleMenu = (group, index) => {
 
 <style>
 
+.map {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: scroll;
+}
+
+.map::-webkit-scrollbar {
+  background-color: var(--maroon-color);
+}
+
+.map::-webkit-scrollbar-corner {
+  background-color: var(--maroon-color);
+}
+
+.map::-webkit-scrollbar-thumb {
+  background-color: var(--maroon-highlight);
+  border-radius: 30px;
+  border: 2px outset var(--gold-color);
+}
+
+.map::-webkit-scrollbar-track-piece {
+  background-color: var(--maroon-color);
+}
+
+.character-map {
+  width: 2000px;
+  height: 1089px;
+  /* aspect-ratio: 5460 / 2965; */
+  background-image: var(--map-background);
+  opacity: .95;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
 .index-btn {
   position: fixed;
   margin: 0;
