@@ -51,17 +51,17 @@ import { movingCharacters } from '../assets/movingCharacters'
 }
 
 #AlbusDumbledore-move {
-  top: 300px;
+  top: 290px;
   right: 200px;
   offset-path: path('m 171 74 C 139 77 138 107 195 114 C 201 114 232 113 216 103 c -32 10 53 -39 -38 -30 z');
-  animation: loop 10000ms infinite linear;
+  animation: loop 20000ms infinite linear;
 }
 
 #QuirinusQuirrel-move {
-  top: 600px;
-  left: 400px;
+  top: 620px;
+  left: 300px;
   offset-path: path('M 0.5 0.5 L 82.5 -84 C 90.5 -89.5 82.5 -102 72.5 -95.5 L -3.5 -17 C -14.5 -9.5 -5 4.5 0 -1 L 82 -84.5 C 88.5 -95.5 55 -99 51 -93.5 L -10.5 -28 C -13 -7.5 -10.5 0.5 2 -11.5 L 0 -64 C -2.5 -96.5 83.5 -108 0 -1 Z');
-  animation: loop 10000ms infinite linear;
+  animation: loop 15000ms infinite linear;
   }
 
 #SeverusSnape-move {
@@ -69,6 +69,13 @@ import { movingCharacters } from '../assets/movingCharacters'
   left: 185px;
   offset-path: path('m 556 185 L 618 96 L 779 230 L 617 410');
   animation: one-way 25000ms infinite linear;
+}
+
+#MadamHooch-move {
+  bottom: 80px;
+  right: 500px;
+  offset-path: path('m 0 -15 C 22.5 -15.75 -21 -116 66 -57 C 92 -46.75 118 -56 92 -72 C 57 -91 31.25 -93.75 60 -108 C 97 -110.75 145.75 -107 108 7 L 196 -52 L 394 -74 C 433 -69 393 -187 563 -134');
+  animation: one-way 70000ms infinite linear;
 }
 
 @keyframes loop {
