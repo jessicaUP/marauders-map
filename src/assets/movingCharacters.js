@@ -2,7 +2,7 @@ export const movingCharacters = [
   { name: 'Harry Potter', group:  'students' },
   { name: 'Hermione Granger', group: 'students' },
   { name: 'Ron Weasley', group: 'students' },
-  { name: 'Draco Malfoy', group: 'students' },
+  { name: 'Draco Malfoy', group: 'students' },//
   { name: 'Neville Longbottom', group: 'students' },//
   { name: 'Luna Lovegood', group: 'students' },//
   { name: 'Ginny Weasley', group: 'students' },
@@ -17,6 +17,6 @@ export const movingCharacters = [
   { name: 'Madam Hooch', group: 'staff' },//
   { name: 'Quirinus Quirrel', group: 'staff' },//
   { name: 'Albus Dumbledore', group: 'staff' },//
-  { name: 'Lord Voldemort', group: 'staff' }
+  { name: 'Lord Voldemort', group: 'staff' }//
 ];
 

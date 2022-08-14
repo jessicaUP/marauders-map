@@ -37,10 +37,10 @@ import { movingCharacters } from '../assets/movingCharacters'
 
 
 #HarryPotter-move {
-  top: 300px;
-  right: 600px;
-  offset-path: path('M20,20 C20,100 200,0 200,100');
-  animation: loop 9000ms infinite alternate ease-in-out;
+  top: 465px;
+  right: 540px;
+  offset-path: path('M 0 0 L 58.2781 -3.4967 L 66.437 37.298 L 164.3442 15.1523 L 180.6621 65.2715 L 207.47 60.6092 L 224.9534 173.6687 L 276.2381 166.6753 L 290.2249 238.9401 L 280.9004 250.5958 L 277.4037 243.6024 L 277.4037 258.7547 L 283.2315 252.9269 L 361.3241 241.2713 L 370.6486 324.0261 C 400.9532 366.3749 431.2578 408.7236 461.5624 451.0724 L 334.5162 467.3902 L 317.0328 365.9864 L 182.9932 385.8009 L 167.8409 289.0593 L 141.033 292.556 L 134.0396 285.5626 L 102.5694 282.0659 L 66.437 71.0993 L 54.7814 -8.1589 L 92.0794 -37.298 C 104.1235 -50.1192 116.1676 -62.9403 128.2118 -75.7615 L 0 -120.0528');
+  animation: one-way 70000ms infinite alternate ease-in-out;
 
 }
 
@@ -77,6 +77,13 @@ import { movingCharacters } from '../assets/movingCharacters'
   left: 185px;
   offset-path: path('m 556 185 L 618 96 L 779 230 L 617 410');
   animation: one-way 25000ms infinite linear;
+}
+
+#DracoMalfoy-move {
+  top: 310px;
+  left: 1000px;
+  offset-path: path('M 0 0 L -206.5 335 L -97 426.5 L 0.5 295 L -99 194 L 4 1');
+  animation: one-way 23500ms infinite linear;
 }
 
 #MadamHooch-move {
