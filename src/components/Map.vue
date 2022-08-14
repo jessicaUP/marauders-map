@@ -44,6 +44,22 @@ import { movingCharacters } from '../assets/movingCharacters'
 
 }
 
+#HermioneGranger-move {
+  top: 465px;
+  right: 530px;
+  offset-path: path('M 0 0 L 23 -39 L 94 22 L 66 40 L 76 115 L 140 107 L 132 60 L 320 26 L 310 -25 L 423 -55 L 393 -106 C 320 -188 427 -309 512 -207 L 621 -293');
+  animation: one-way 70000ms infinite alternate ease-in-out;
+
+}
+
+#GinnyWeasley-move {
+  bottom: 160px;
+  right: 850px;
+  offset-path: path('M -1 -22 L 33 12 L 69 -107 C 91 -159 129 -203 173 -227 L 142 -266 L 212 -321 L 248 -291 L 287 -323 L 305 -301');
+  animation: one-way 40000ms infinite ease-in-out;
+
+}
+
 #NevilleLongbottom-move {
   bottom: 60px;
   left: 450px;

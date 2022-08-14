@@ -1,6 +1,6 @@
 export const movingCharacters = [
-  { name: 'Harry Potter', group:  'students' },
-  { name: 'Hermione Granger', group: 'students' },
+  { name: 'Harry Potter', group:  'students' },//
+  { name: 'Hermione Granger', group: 'students' },//
   { name: 'Ron Weasley', group: 'students' },
   { name: 'Draco Malfoy', group: 'students' },//
   { name: 'Neville Longbottom', group: 'students' },//
