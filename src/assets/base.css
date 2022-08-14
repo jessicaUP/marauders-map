@@ -1,20 +1,20 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
-  --maroon-color: maroon;
-  --maroon-highlight: red;
+  --color-maroon: maroon;
+  --color-highlight-maroon: red;
   
-  --blue-color: rgb(30, 58, 110);
+  --color-blue: rgb(30, 58, 110);
 
-  --gold-color: tan;
-  --white-color: white;
+  --color-gold: tan;
+  --color-white: white;
 
-  --title-font: 'Barlow Condensed', sans-serif;
+  --font-title: 'Barlow Condensed', sans-serif;
 
-  --card-front: url('../assets/images/cardFront.png');
-  --card-back: url('../assets/images/cardBack.png');
-  --map-background: url('../assets/images/map.jpg');
-  --map-cover-right: url('../assets/images/right.png');
-  --map-cover-left: url('../assets/images/left.png');
+  --img-card-front: url('../assets/images/cardFront.png');
+  --img-card-back: url('../assets/images/cardBack.png');
+  --img-map-background: url('../assets/images/map.jpg');
+  --img-map-cover-right: url('../assets/images/right.png');
+  --img-map-cover-left: url('../assets/images/left.png');
 
 
 }
@@ -22,7 +22,7 @@
 /* semantic color variables for this project */
 :root {
   --section-gap: 160px;
-  background-color: var(--gold-color);
+  background-color: var(--color-gold);
 }
 
 
@@ -33,7 +33,7 @@
   margin: 0;
   position: relative;
   font-weight: normal;
-  font-family: var(--title-font)
+  font-family: var(--font-title)
 }
 
 body {

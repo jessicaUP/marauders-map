@@ -65,28 +65,28 @@ const handleMenu = (group, index) => {
 }
 
 .map::-webkit-scrollbar {
-  background-color: var(--maroon-color);
+  background-color: var(--color-maroon);
 }
 
 .map::-webkit-scrollbar-corner {
-  background-color: var(--maroon-color);
+  background-color: var(--color-maroon);
 }
 
 .map::-webkit-scrollbar-thumb {
-  background-color: var(--maroon-highlight);
+  background-color: var(--color-highlight-maroon);
   border-radius: 30px;
-  border: 2px outset var(--gold-color);
+  border: 2px outset var(--color-gold);
 }
 
 .map::-webkit-scrollbar-track-piece {
-  background-color: var(--maroon-color);
+  background-color: var(--color-maroon);
 }
 
 .character-map {
   width: 2000px;
   height: 1089px;
   /* aspect-ratio: 5460 / 2965; */
-  background-image: var(--map-background);
+  background-image: var(--img-map-background);
   opacity: .95;
   background-size: contain;
   background-repeat: no-repeat;
@@ -105,24 +105,24 @@ const handleMenu = (group, index) => {
 
 #true-students {
   left: 175px;
-  background-color: var(--maroon-color);
+  background-color: var(--color-maroon);
 }
 
 #false-students {
   left: -50px;
-  background-color: var(--maroon-color);
+  background-color: var(--color-maroon);
 }
 
 #true-staff {
   left: 175px;
   top: 190px;
-  background-color: var(--maroon-highlight);
+  background-color: var(--color-highlight-maroon);
 }
 
 #false-staff {
   left: -50px;
   top: 190px;
-  background-color: var(--maroon-highlight);
+  background-color: var(--color-highlight-maroon);
 }
 
 

@@ -11,7 +11,7 @@
   transform: rotate(-45deg);
   width: 200px;
   height: 200px;
-  background-color: var(--maroon-color);
+  background-color: var(--color-maroon);
   animation: loader 5s infinite linear;
 
 }

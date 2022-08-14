@@ -57,6 +57,13 @@ import { movingCharacters } from '../assets/movingCharacters'
   animation: loop 10000ms infinite linear;
 }
 
+#QuirinusQuirrel-move {
+  top: 600px;
+  left: 400px;
+  offset-path: path('M 0.5 0.5 L 82.5 -84 C 90.5 -89.5 82.5 -102 72.5 -95.5 L -3.5 -17 C -14.5 -9.5 -5 4.5 0 -1 L 82 -84.5 C 88.5 -95.5 55 -99 51 -93.5 L -10.5 -28 C -13 -7.5 -10.5 0.5 2 -11.5 L 0 -64 C -2.5 -96.5 83.5 -108 0 -1 Z');
+  animation: loop 10000ms infinite linear;
+  }
+
 #SeverusSnape-move {
   bottom: 490px;
   left: 185px;

@@ -52,16 +52,16 @@ const props = defineProps({
 }
 
 .moving-icon>.character-name {
-  font-family: var(--title-font);
+  font-family: var(--font-title);
   margin: 2px;
   padding: 1px 35px 1px 10px;
-  background-color: var(--maroon-color);
+  background-color: var(--color-maroon);
   width: fit-content;
   clip-path: polygon(0% 0%, 100% 0%, calc(100% - 20px) 50%, 100% 100%, 0% 100%);
 }
 
 .moving-icon>.character-name>.list-btn {
-  color: var(--gold-color);
+  color: var(--color-gold);
 } 
 
 </style>

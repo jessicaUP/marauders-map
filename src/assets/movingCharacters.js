@@ -17,6 +17,6 @@ export const movingCharacters = [
   { name: 'Madam Hooch', group: 'staff' },
   { name: 'Quirinus Quirrel', group: 'staff' },
   { name: 'Albus Dumbledore', group: 'staff' },
-  { name: 'Dolores Umbridge', group: 'staff' }
+  // { name: 'Dolores Umbridge', group: 'staff' }
 ]
 

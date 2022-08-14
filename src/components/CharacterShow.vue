@@ -53,11 +53,11 @@ updateCharacter(name, group);
   }
 
   #front {
-    background-image: var(--card-front);
+    background-image: var(--img-card-front);
   }
 
   #back {
-    background-image: var(--card-back);
+    background-image: var(--img-card-back);
     z-index: 1;
   }
 
@@ -77,8 +77,8 @@ updateCharacter(name, group);
     border-radius: 100%;
     font-size: 18px;
     color: tan;
-    background-color: var(--blue-color);
-    border: 2px outset var(--gold-color);
+    background-color: var(--color-blue);
+    border: 2px outset var(--color-gold);
     z-index: 2;
 
   }
@@ -108,16 +108,16 @@ updateCharacter(name, group);
   }
 
   .info > h1 {
-    font-family: var(--title-font);
+    font-family: var(--font-title);
     font-size: 20px;
-    color: var(--white-color);
+    color: var(--color-white);
   }
 
   .info > p {
-    font-family: var(--title-font);    
+    font-family: var(--font-title);    
     line-height: 19px;
     padding: 0;
-    color: var(--gold-color);
+    color: var(--color-gold);
     text-align: center;
   }
 
