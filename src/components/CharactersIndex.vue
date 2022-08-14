@@ -36,7 +36,7 @@ const { index } = storeToRefs(useMapStore());
     top: 0;
     bottom: 0;
     left: 0;
-    background-color: maroon;
+    background-color: var(--maroon-color);
     width: 225px;
     overflow: scroll;
 
@@ -52,11 +52,11 @@ const { index } = storeToRefs(useMapStore());
   }
 
   #staff-wrap {
-    background-color: red;
+    background-color: var(--maroon-highlight);
   }
 
   .list-btn {
-    color: lightgray;
+    color: var(--white-color);
     font-size: 20px;
     text-align: left;
   }

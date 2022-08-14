@@ -29,16 +29,16 @@
   aspect-ratio: 823 / 2920;
   background-size: contain;
   background-repeat: no-repeat;
-  box-shadow: 5px 10px 10px maroon;
+  box-shadow: 5px 10px 10px var(--maroon-color);
 }
 
 #right {
-  background-image: url('../assets/images/right.png');
+  background-image: var(--map-cover-right);
 
 }
 
 #left {
-  background-image: url('../assets/images/left.png');
+  background-image: var(--map-cover-left);
 
 }
 

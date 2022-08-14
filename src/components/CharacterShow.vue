@@ -53,11 +53,11 @@ updateCharacter(name, group);
   }
 
   #front {
-    background-image: url('../assets/images/cardFront.png');
+    background-image: var(--card-front);
   }
 
   #back {
-    background-image: url('../assets/images/cardBack.png');
+    background-image: var(--card-back);
     z-index: 1;
   }
 
@@ -77,8 +77,8 @@ updateCharacter(name, group);
     border-radius: 100%;
     font-size: 18px;
     color: tan;
-    background-color: rgb(30, 58, 110);
-    border: none;
+    background-color: var(--blue-color);
+    border: 2px outset var(--gold-color);
     z-index: 2;
 
   }
@@ -108,16 +108,16 @@ updateCharacter(name, group);
   }
 
   .info > h1 {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--title-font);
     font-size: 20px;
-    color: white;
+    color: var(--white-color);
   }
 
   .info > p {
-    font-family: 'Barlow Condensed', sans-serif;    
+    font-family: var(--title-font);    
     line-height: 19px;
     padding: 0;
-    color: tan;
+    color: var(--gold-color);
     text-align: center;
   }
 

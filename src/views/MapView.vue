@@ -73,24 +73,24 @@ const handleMenu = (group, index) => {
 
 #true-students {
   left: 175px;
-  background-color: maroon;
+  background-color: var(--maroon-color);
 }
 
 #false-students {
   left: -50px;
-  background-color: maroon;
+  background-color: var(--maroon-color);
 }
 
 #true-staff {
   left: 175px;
   top: 190px;
-  background-color: red;
+  background-color: var(--maroon-highlight);
 }
 
 #false-staff {
   left: -50px;
   top: 190px;
-  background-color: red;
+  background-color: var(--maroon-highlight);
 }
 
 
