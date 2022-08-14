@@ -38,6 +38,24 @@ import { movingCharacters } from '../assets/movingCharacters'
   overflow: scroll;
 }
 
+.map::-webkit-scrollbar {
+  background-color: maroon;
+}
+
+.map::-webkit-scrollbar-corner {
+  background-color: maroon;
+}
+
+.map::-webkit-scrollbar-thumb {
+  background-color: red;
+  border-radius: 30px;
+  border: 2px outset tan;
+}
+
+.map::-webkit-scrollbar-track-piece {
+  background-color: maroon;
+}
+
 .character-map {
   width: 2000px;
   height: 1089px;
@@ -48,21 +66,5 @@ import { movingCharacters } from '../assets/movingCharacters'
   z-index: -1;
 }
 
-.moving-icon {
-  width: fit-content;
-}
-
-.moving-icon > .character-name {
-  font-family: 'Barlow Condensed', sans-serif;
-  margin: 2px;
-  padding: 1px 35px 1px 10px;
-  background-color: white;
-  width: fit-content;
-  clip-path: polygon(0% 0%, 100% 0%, calc(100% - 20px) 50%, 100% 100%, 0% 100%);
-}
-
-.moving-icon > .character-name > .list-btn {
-  color: maroon;
-}
 
 </style>

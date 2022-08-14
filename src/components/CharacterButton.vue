@@ -47,5 +47,21 @@ const props = defineProps({
 </template>
 
 <style>
+.moving-icon {
+  width: fit-content;
+}
+
+.moving-icon>.character-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  margin: 2px;
+  padding: 1px 35px 1px 10px;
+  background-color: maroon;
+  width: fit-content;
+  clip-path: polygon(0% 0%, 100% 0%, calc(100% - 20px) 50%, 100% 100%, 0% 100%);
+}
+
+.moving-icon>.character-name>.list-btn {
+  color: tan;
+} 
 
 </style>
