@@ -40,10 +40,10 @@ import { movingCharacters } from '../assets/movingCharacters'
 
 .character-map {
   width: 2000px;
-  height: 1361px;
+  height: 1089px;
   /* aspect-ratio: 5460 / 2965; */
   background-image: url('../assets/images/map.jpg');
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   z-index: -1;
 }
