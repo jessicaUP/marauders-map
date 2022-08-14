@@ -99,6 +99,13 @@ import { movingCharacters } from '../assets/movingCharacters'
   animation: one-way 70000ms infinite linear;
 }
 
+#LunaLovegood-move {
+  top: 510px;
+  right: 550px;
+  offset-path: path('M 0 0 C -25 -5 -40 -8 -28 -34 L -10 -86 L -39 -140 L -69 -208 C 10 -228 -52 -354 -132 -296 L -135 -297 L -135 -296 L -134 -297 L -130 -299');
+  animation: loop 70000ms infinite alternate linear;
+}
+
 
 
 
