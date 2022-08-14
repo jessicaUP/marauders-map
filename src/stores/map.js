@@ -31,7 +31,7 @@ export const useMapStore = defineStore({
     changeIndex(group) {
       this.index.group = group;
     },
-    openShow(close = ) {
+    openShow() {
       if (this.show.open) {
         this.show.open = false;
       } else {
