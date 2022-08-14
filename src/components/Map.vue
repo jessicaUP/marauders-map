@@ -44,6 +44,14 @@ import { movingCharacters } from '../assets/movingCharacters'
 
 }
 
+#RonWeasley-move {
+  top: 460px;
+  right: 540px;
+  offset-path: path('M 0 0 L 101.65 19 L 64.6 44.65 L 108.3 337.25 L 111.15 365.75 L 169.1 518.7 L 401.85 493.05 C 446.5 473.1 502.55 487.35 494 555.75');
+  animation: one-way 40000ms infinite alternate ease-in-out;
+
+}
+
 #HermioneGranger-move {
   top: 465px;
   right: 530px;
