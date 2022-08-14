@@ -106,6 +106,20 @@ import { movingCharacters } from '../assets/movingCharacters'
   animation: loop 70000ms infinite alternate linear;
 }
 
+#ArgusFilch-move {
+  bottom: 400px;
+  left: 700px;
+  offset-path: path('M 0 0 C -217 -3 -256 310 0 337');
+  animation: one-way 80000ms infinite linear;
+}
+
+#MrsNorris-move {
+  bottom: 420px;
+  left: 690px;
+  offset-path: path('M 0 0 C -165 31 -251 197 -117 282 L -106 273 C -104 338 -145 154 -178 143 L -192 140 L -188 160 L -179 160 C -200 219 -152 353 1 361 L 1 334 L 0 361');
+  animation: one-way 80000ms infinite linear;
+}
+
 
 
 

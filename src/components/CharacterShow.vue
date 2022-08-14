@@ -47,7 +47,7 @@ updateCharacter(name, group);
     position: fixed;
     background-size: contain;
     top: 20px;
-    right: 25px;
+    right: 40px;
     width: 360px;
     height: 360px;
   }
@@ -85,13 +85,13 @@ updateCharacter(name, group);
 
   #close {
     top: 335px;
-    right: 41px;
+    right: 60px;
 
   }
 
   #flip {
-    top: 290px;
-    right: 25px;
+    top: 295px;
+    right: 45px;
     font-size: 25px;
     transform: rotate(-40deg);
   }

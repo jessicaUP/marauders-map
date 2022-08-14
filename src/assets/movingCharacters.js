@@ -4,7 +4,7 @@ export const movingCharacters = [
   { name: 'Ron Weasley', group: 'students' },
   { name: 'Draco Malfoy', group: 'students' },
   { name: 'Neville Longbottom', group: 'students' },//
-  { name: 'Luna Lovegood', group: 'students' },
+  { name: 'Luna Lovegood', group: 'students' },//
   { name: 'Ginny Weasley', group: 'students' },
   { name: 'Fred Weasley', group: 'students' },//
   { name: 'George Weasley', group: 'students' },//
