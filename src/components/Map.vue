@@ -82,8 +82,23 @@ import { movingCharacters } from '../assets/movingCharacters'
   bottom: 90px;
   right: 260px;
   offset-path: path('M 320.5 -411.5 C 276 -228.5 220 -419.5 223 -238 C 46 -23.375 251.5 -122.5 188.5 -82 C 137.5 -112 226 -90 187.5 -85.5 L 176 -93.5 L 191 -93.5 C 169.5 -35 319 -397.5 249.5 48.5');
-  animation: one-way 80000ms infinite linear;
+  animation: one-way 100000ms infinite linear;
 }
+
+#FredWeasley-move {
+  top: 550px;
+  left: 120px;
+  offset-path: path('M 0 0 L 0 88 L 3 -3 C 6 -103 127.4219 -267.9688 387 -293 L 475 -321 C 446.7969 -357.6563 458 -397 494 -405 C 546 -428 589 -305 482 -324 L 382 -281 C 127.4219 -251.0156 33.9063 -97.8906 8.75 6.0156');
+  animation: one-way 70000ms infinite linear;
+}
+
+#GeorgeWeasley-move {
+  top: 550px;
+  left: 120px;
+  offset-path: path('M 0 1 L 1 1 C 39 -102 127.4219 -267.9688 376 -268 L 490 -343 C 477 -351 491 -381 499 -377 C 531 -386 549 -341 489 -347 L 382 -281 C 127.4219 -251.0156 33.9063 -97.8906 8.75 6.0156');
+  animation: one-way 70000ms infinite linear;
+}
+
 
 
 

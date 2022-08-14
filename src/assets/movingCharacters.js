@@ -8,7 +8,7 @@ export const movingCharacters = [
   { name: 'Ginny Weasley', group: 'students' },
   { name: 'Fred Weasley', group: 'students' },
   { name: 'George Weasley', group: 'students' },
-  { name: 'Rubeus Hagrid', group: 'staff' },
+  { name: 'Rubeus Hagrid', group: 'staff' },//
   { name: 'Remus Lupin', group: 'staff' },
   { name: 'Severus Snape', group: 'staff' },//
   // { name: 'Horace Slughorn', group: 'staff' },
