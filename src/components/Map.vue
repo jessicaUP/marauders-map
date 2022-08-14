@@ -28,6 +28,9 @@ import { movingCharacters } from '../assets/movingCharacters'
 </template>
 
 <style>
+.moving-icon {
+  width: fit-content;
+}
 
 .moving-icon > .character-name {
   font-family: 'Barlow Condensed', sans-serif;

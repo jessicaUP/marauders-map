@@ -99,21 +99,21 @@ updateCharacter(name, group);
     height: 35px;
     border-radius: 100%;
     font-size: 18px;
-    color: white;
-    background-color: darkcyan;
+    color: tan;
+    background-color: rgb(30, 58, 110);
     border: none;
     z-index: 1;
   }
 
   #close {
-    top: 285px;
-    right: 35px;
+    top: 335px;
+    right: 41px;
 
   }
 
   #flip {
-    top: 240px;
-    right: 17px;
+    top: 290px;
+    right: 25px;
     font-size: 25px;
     transform: rotate(-40deg);
   }
