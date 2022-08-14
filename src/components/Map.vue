@@ -51,10 +51,10 @@ import { movingCharacters } from '../assets/movingCharacters'
 }
 
 #SeverusSnape-move {
-  bottom: 60px;
-  left: 600px;
-  offset-path: path('M20,20 C20,100 200,0 200,100');
-  animation: one-way 5000ms infinite linear;
+  bottom: 490px;
+  left: 185px;
+  offset-path: path('m 556 185 L 618 96 L 779 230 L 617 410');
+  animation: one-way 25000ms infinite linear;
 }
 
 @keyframes loop {
@@ -77,14 +77,20 @@ import { movingCharacters } from '../assets/movingCharacters'
     opacity: 1;
   }
 
-  95% {
+  85% {
     opacity: 1;
   }
-
-  100% {
+  
+  90% {
     offset-distance: 100%;
     opacity: 0;
   }
+  
+  100% {
+    opacity: 0;
+  }
+
+  
 }
 
 
