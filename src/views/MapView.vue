@@ -45,12 +45,6 @@ const handleMenu = (group, index) => {
       @click="handleMenu('staff', index)"
     >Staff</button>
 
-    <!-- <button
-      @click="openIndex"
-      class="index-btn"
-      :id="index.open + '-index'"
-    >Wizard List</button> -->
-
     <div class="index-wrap" v-if="index.open">
       <CharactersIndex />
     </div>

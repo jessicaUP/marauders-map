@@ -10,6 +10,7 @@ export const movingCharacters = [
   { name: 'George Weasley', group: 'students' },
   { name: 'Rubeus Hagrid', group: 'staff' },
   { name: 'Remus Lupin', group: 'staff' },
+  { name: 'Severus Snape', group: 'staff' },
   { name: 'Horace Slughorn', group: 'staff' },
   { name: 'Mrs Norris', group: 'staff' },
   { name: 'Argus Filch', group: 'staff' },
