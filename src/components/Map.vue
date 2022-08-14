@@ -43,6 +43,13 @@ import { movingCharacters } from '../assets/movingCharacters'
 
 }
 
+#NevilleLongbottom-move {
+  bottom: 60px;
+  left: 450px;
+  offset-path: path('m -1 1 C -209 -172 -123 -423 98 -438 L 129 -362 C 125 -305 46 -357 93 -378 C 104 -385 134 -378 119 -349 C 73 -311 81 -388 118 -390 L 96 -443 C 132 -478 177 -522 242 -509');
+  animation: one-way 30000ms infinite linear;
+}
+
 #AlbusDumbledore-move {
   top: 300px;
   right: 200px;
