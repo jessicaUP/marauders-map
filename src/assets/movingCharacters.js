@@ -12,11 +12,11 @@ export const movingCharacters = [
   // { name: 'Remus Lupin', group: 'staff' },
   { name: 'Severus Snape', group: 'staff' },//
   // { name: 'Horace Slughorn', group: 'staff' },
-  { name: 'Mrs Norris', group: 'staff' },
-  { name: 'Argus Filch', group: 'staff' },
+  { name: 'Mrs Norris', group: 'staff' },//
+  { name: 'Argus Filch', group: 'staff' },//
   { name: 'Madam Hooch', group: 'staff' },//
   { name: 'Quirinus Quirrel', group: 'staff' },//
   { name: 'Albus Dumbledore', group: 'staff' },//
-  // { name: 'Dolores Umbridge', group: 'staff' }
-]
+  { name: 'Lord Voldemort', group: 'staff' }
+];
 

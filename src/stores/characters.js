@@ -40,14 +40,16 @@ export const useCharacterStore = defineStore({
       } finally {
         loadCount++;
         if (loadCount === 2) this.loading = false;
-
+        staff.push({ name: 'Lord Voldemort', gender: 'Tom Marvolo Riddle', dateOfBirth: 'He Who Must Not Be Named', house: 'You-Know-Who' })
         staff.forEach((character) => this.staff[character.name] = character)
+        console.log(staff)
+        // this.staff['Lord Voldemort'] = { name: 'Lord Voldemort', house: 'Tom Marvolo Riddle', gender: 'He Who Must Not Be Named', eyeColour: 'You-Know-Who' }
       }
 
     },
     updateCharacter(name, group) {
       let key = name.split(' ').map((word) => word[0].toUpperCase() + word.slice(1)).join(' ');
-      this.character = this[group][key];
+      this.character = this[group][key];;
     }
   }
 })

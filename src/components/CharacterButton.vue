@@ -42,7 +42,7 @@ const props = defineProps({
           class="button list-btn" 
           :to="{ path: '/' + props.group + '/' + props.name }" 
           :key="props.name"
-        >{{props.name}}</router-link>
+        >{{props.name === 'Lord Voldemort' ? '???' : props.name}}</router-link>
       </div>
 </template>
 
