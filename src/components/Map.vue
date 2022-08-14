@@ -78,6 +78,15 @@ import { movingCharacters } from '../assets/movingCharacters'
   animation: one-way 70000ms infinite linear;
 }
 
+#RubeusHagrid-move {
+  bottom: 90px;
+  right: 260px;
+  offset-path: path('M 320.5 -411.5 C 276 -228.5 220 -419.5 223 -238 C 46 -23.375 251.5 -122.5 188.5 -82 C 137.5 -112 226 -90 187.5 -85.5 L 176 -93.5 L 191 -93.5 C 169.5 -35 319 -397.5 249.5 48.5');
+  animation: one-way 80000ms infinite linear;
+}
+
+
+
 @keyframes loop {
   0% {
     offset-distance: 0%;
