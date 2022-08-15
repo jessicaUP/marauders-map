@@ -131,7 +131,7 @@ const closeMap = () => {
 .character-map {
   width: 2000px;
   height: 1089px;
-  /* aspect-ratio: 5460 / 2965; */
+  background-color: white;
   background-image: var(--img-map-background);
   opacity: .95;
   background-size: contain;
