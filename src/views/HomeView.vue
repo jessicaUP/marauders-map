@@ -2,16 +2,24 @@
 import { onBeforeUnmount } from 'vue';
 import Steps from '../components/Steps.vue';
 
-onBeforeUnmount(() => {
+// onBeforeUnmount(() => {
+//   setTimeout(() => {}, 60000)
+//   const openBtn = document.getElementById('open');
+//   openBtn.classList.add('open-move');
+  
+// })
+
+const openMapMove = () => {
   const openBtn = document.getElementById('open');
   openBtn.classList.add('open-move');
-  
-})
+  setTimeout(() => { openBtn.click() },  2000)
+}
 </script>
 
 <template>
-  <router-link to="map" class="button" id="open">"I solemnly swear that I am up to no good..."
-  </router-link>
+  <div class="button open" id="click-open" @click="openMapMove"></div>
+  <router-link to="map" class="button open" id="open">"I solemnly swear that I am up to no good..."</router-link>
+
 
   <div class="map-cover">
     <div class="cover" id="left"></div>
@@ -21,22 +29,39 @@ onBeforeUnmount(() => {
 
 <style>
 
-#open {
+.open {
   font-family: var(--font-title);
   position: relative;
   bottom: 10px;
   right: 10px;
   color: var(--color-maroon);
   font-size: 5vw;
-  animation: zoom 10s ease-out 1 normal forwards;
+  white-space: nowrap;
+  z-index: 0;
 }
 
-@keyframes {
+#click-open {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.open-move {
+  animation: zoom 2s ease-in 1 normal forwards;
+}
+
+@keyframes zoom {
   0% {
     font-size: 5vw;
   }
+  95% {
+    font-size: 60vw;
+  }
   100% {
-    
+    opacity: 0;
   }
 }
 
@@ -48,7 +73,7 @@ onBeforeUnmount(() => {
   bottom: 0;
   right: 0;
   left: 0;
-  z-index: -1;
+  z-index: -2;
 }
 
 .cover {
