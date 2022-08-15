@@ -86,6 +86,20 @@ Displayed on the left side of the map are buttons allowing users to open a menu 
 ```
 
 - Home Page Animation: Utilizing css @keyframes, Users are greated with the only way to open The Marauder's Map (saying the spell 'I solemnly swear that I am up to no good'). Once clicked, DOM elements are selected and a class is added to the classlist. The new class triggers the animation.
+
+``` Javascript
+const openMapMove = () => {
+  const openBtn = document.getElementById('open');
+  const coverRight = document.getElementById('right');
+  const coverLeft = document.getElementById('left');
+  openBtn.classList.add('open-move');
+  coverRight.classList.add('live-right');
+  coverLeft.classList.add('live-left');
+  setTimeout(() => { openBtn.click() }, 3000);
+}
+```
+
+- Store management: Centralzied Character and Map state.
 - Dynamic URL Params: Allows the url to track what character has been selected, so the user can pick up where they left of if the page needs to refresh. 
 
 ```Javascript
@@ -143,8 +157,3 @@ npm install
 npm run dev
 ```
 
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
