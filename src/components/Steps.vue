@@ -4,16 +4,6 @@
 
 <template>
   <div class="steps-wrap">
-    <div class="right-group">
-      <div class="foot foot-right" id="right-1"></div>
-      <div class="foot foot-right" id="right-2"></div>
-      <div class="foot foot-right" id="right-3"></div>
-      <div class="foot foot-right" id="right-4"></div>
-      <div class="foot foot-right" id="right-5"></div>
-      <!-- <div class="foot foot-right" id="right-6"></div>
-      <div class="foot foot-right" id="right-7"></div>
-      <div class="foot foot-right" id="right-8"></div> -->
-    </div>
     <div class="left-group">
       <div class="foot foot-left" id="left-1"></div>
       <div class="foot foot-left" id="left-2"></div>
@@ -24,6 +14,16 @@
       <div class="foot foot-left" id="left-7"></div>
       <div class="foot foot-left" id="left-8"></div> -->
     </div>
+    <div class="right-group">
+      <div class="foot foot-right" id="right-1"></div>
+      <div class="foot foot-right" id="right-2"></div>
+      <div class="foot foot-right" id="right-3"></div>
+      <div class="foot foot-right" id="right-4"></div>
+      <div class="foot foot-right" id="right-5"></div>
+      <!-- <div class="foot foot-right" id="right-6"></div>
+      <div class="foot foot-right" id="right-7"></div>
+      <div class="foot foot-right" id="right-8"></div> -->
+    </div>
   </div>
 </template>
 
@@ -31,7 +31,7 @@
 
 .steps-wrap {
   position: relative;
-  top: 300px;
+  top: 0;
   
 }
 
@@ -48,28 +48,30 @@
 }
 
 .foot {
-  background-image: url('../assets/images/shoePrintRight.png');
   background-size: contain;
   background-repeat: no-repeat;
   width: 50px;
   height: 50px;
   opacity: 0;
   animation: fadeOut, fadeIn;
-  animation-duration: 9s, 9s;
+  animation-duration: 10s, 10s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
 }
 
 .foot-right {
+  background-image: url('../assets/images/shoePrintRight.png');
+  transform: rotate(90deg);
   /* animation: stepRight 30000s steps(4, end) infinite; */
 }
 
 .foot-left {
-  transform: scaleX(-1);
+  background-image: url('../assets/images/shoePrintLeft.jpg');
+  transform: rotate(90deg);
   /* animation: stepLeft 6s steps(4, end) infinite; */
 }
 
-@keyframes fadeOut {
+@keyframes fadeIn {
   25% {
     opacity: 0;
   }
@@ -78,7 +80,7 @@
   }
 }
 
-@keyframes fadeIn {
+@keyframes fadeOut {
   10% {
     opacity: 1;
   }
