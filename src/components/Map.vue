@@ -21,9 +21,9 @@ const { character } = storeToRefs(useCharacterStore());
       :id="char.name.split(' ').join('') + '-move'"
     >
       <CharacterButton 
+        :class="character && character.name === char.name ? 'hightlight' : ''"
         :name="char.name"
         :group="char.group"
-
       />
       <Steps 
         v-if="character && character.name === char.name"
@@ -43,6 +43,10 @@ const { character } = storeToRefs(useCharacterStore());
 .moving-icon {
   position: absolute;
   offset-rotate: 0deg;
+}
+
+#highlight {
+  background-color: var(--color-red);
 }
 
 .btn-feet {

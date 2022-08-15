@@ -102,7 +102,7 @@ const { openShow, changeShow } = useMapStore();
     left: 93px;
     top: 118px;
     width: 150px;
-    height: fit-content;
+    height: 150px;
 
   }
 

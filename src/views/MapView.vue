@@ -48,7 +48,7 @@ const closeMap = () => {
 
 <template>
 
-<div class="app-title" @click="closeMap"></div>
+<div class="app-title" ></div>
 
 <Map />
 
@@ -93,7 +93,7 @@ const closeMap = () => {
   background-repeat: no-repeat;
   background-position: center;
   z-index: 1;
-  cursor: pointer;
+  pointer-events: none;
 
 }
 
@@ -101,9 +101,6 @@ const closeMap = () => {
   opacity: 0;
 }
 
-.app-title:hover {
-  transform: scale(1.025);
-}
 
 .map {
   position: fixed;
