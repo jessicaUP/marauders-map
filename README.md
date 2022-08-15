@@ -41,11 +41,8 @@ Open API
 The map acts as the main view and allows users to display information about the HP characters while interacting with a simulation of the Marauder's Map from the movies.
 
 - SVG Paths - 18 main characters have been added to the Map with a custom SVG path dictating the animation motion.
+     To Create the SVG paths I utilized [Path Editor](https://yqnn.github.io/svg-path-editor/)
 
-> To Create the SVG paths I utilized [Path Editor](https://yqnn.github.io/svg-path-editor/)
-
-![svgPathExample](svgExample.png)
-![svgPathExamples](svgExamples.png)
 
 ```css
 #SeverusSnape-move {
@@ -71,7 +68,7 @@ Once a character is selected either from the side menu or via route params, the 
 
 ### CHARACTER INDEX
 
-Displayed on the left side of the map are buttons allowing users to open a menu with all students/staff names listed with links to their show page.
+Displayed on the left side of the map are buttons allowing users to open a menu with all students/staff names listed in alphabetical order. These buttons populate thecharacter's wizard card.
 
 ### ADDITIONAL FEATURES
 
