@@ -18,7 +18,6 @@ const handleExit = () => {
 
 }
 
-
 </script>
 
 <template>

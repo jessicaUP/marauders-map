@@ -8,12 +8,14 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      mode : 'hash'
     },
     {
       path: '/map/:group?/:name?',
       name: 'character',
-      component: MapView
+      component: MapView,
+      mode : 'hash'
     }
 
   ]
