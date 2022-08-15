@@ -90,8 +90,9 @@ const { openShow, changeShow } = useMapStore();
   #flip {
     top: 295px;
     right: 45px;
-    font-size: 25px;
+    font-size: 22px;
     transform: rotate(-40deg);
+    
   }
 
   .info {
