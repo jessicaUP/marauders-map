@@ -1,6 +1,7 @@
 <script setup>
 import CharacterButton from './CharacterButton.vue';
 import { movingCharacters } from '../assets/movingCharacters'
+import Steps from './Steps.vue';
 
 
 </script>
@@ -19,6 +20,7 @@ import { movingCharacters } from '../assets/movingCharacters'
         :group="character.group"
 
       />
+      <!-- <Steps class="btn-feet" :id="character.name.split(' ').join('') + '-feet'"/> -->
     </div>
     
   </div>
@@ -33,6 +35,10 @@ import { movingCharacters } from '../assets/movingCharacters'
 .moving-icon {
   position: absolute;
   offset-rotate: 0deg;
+}
+
+.btn-feet {
+  transform: scale(.5);
 }
 
 

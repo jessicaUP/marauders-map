@@ -37,7 +37,7 @@
 
 .left-group, .right-group {
   display: flex;
-  width: 500px;
+  width: 430px;
   justify-content: space-between;
 }
 
@@ -51,7 +51,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   width: 50px;
-  height: 50px;
+  height: 40px;
   opacity: 0;
   animation: fadeOut, fadeIn;
   animation-duration: 10s, 10s;
