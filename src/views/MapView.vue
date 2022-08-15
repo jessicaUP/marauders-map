@@ -34,16 +34,20 @@ const handleMenu = (group, index) => {
       <CharacterShow />
     </div>
 
-    <button 
+    <div 
       class="index-btn"
       :id="index.open + '-students'"
       @click="handleMenu('students', index)"
-    >Students</button>
-    <button 
+    >
+    <p>Students</p>
+    </div>
+    <div 
       class="index-btn" 
       :id="index.open + '-staff'"
       @click="handleMenu('staff', index)"
-    >Staff</button>
+    >
+    <p>Staff</p>
+    </div>
 
     <div class="index-wrap" v-if="index.open">
       <CharactersIndex />
@@ -94,35 +98,48 @@ const handleMenu = (group, index) => {
 }
 
 .index-btn {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
   position: fixed;
   margin: 0;
-  transform: rotate(90deg);
-  font-size: 20px;
-  width: 125px;
-  height: 30px;
-  top: 60px;
+  width: 110px;
+  height: 80px;
+  bottom: 120px;
+  border: none;
+  text-align: center;
+}
+
+.index-btn > p {
+  color: var(--color-white);
+  font-size: 19px;
+  margin-top: 20px;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 #true-students {
-  left: 175px;
-  background-color: var(--color-maroon);
+  background-image: url('../assets/images/ribbon-m.png');
+  left: 214px;
+  bottom: 105px;
 }
 
 #false-students {
-  left: -50px;
-  background-color: var(--color-maroon);
+  background-image: url('../assets/images/ribbon-m.png');
+  left: -10px;
+  bottom: 105px;
 }
 
 #true-staff {
-  left: 175px;
-  top: 190px;
-  background-color: var(--color-highlight-maroon);
+  background-image: url('../assets/images/ribbon-r.png');
+  left: 214px;
+  bottom: 45px;
 }
 
 #false-staff {
-  left: -50px;
-  top: 190px;
-  background-color: var(--color-highlight-maroon);
+  background-image: url('../assets/images/ribbon-r.png');
+  left: -10px;
+  bottom: 45px;
 }
 
 
