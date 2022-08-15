@@ -33,10 +33,14 @@ const { loading } = storeToRefs(useCharacterStore());
 
 .content-wrap {
   position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
+  overflow: hidden;
 }
 
 

@@ -1,12 +1,17 @@
 <script setup>
+import { onBeforeUnmount } from 'vue';
 import Steps from '../components/Steps.vue';
+
+onBeforeUnmount(() => {
+  const openBtn = document.getElementById('open');
+  openBtn.classList.add('open-move');
+  
+})
 </script>
 
 <template>
   <router-link to="map" class="button" id="open">"I solemnly swear that I am up to no good..."
   </router-link>
-
-  <Steps /> 
 
   <div class="map-cover">
     <div class="cover" id="left"></div>
@@ -15,6 +20,25 @@ import Steps from '../components/Steps.vue';
 </template>
 
 <style>
+
+#open {
+  font-family: var(--font-title);
+  position: relative;
+  bottom: 10px;
+  right: 10px;
+  color: var(--color-maroon);
+  font-size: 5vw;
+  animation: zoom 10s ease-out 1 normal forwards;
+}
+
+@keyframes {
+  0% {
+    font-size: 5vw;
+  }
+  100% {
+    
+  }
+}
 
 .map-cover {
   display: flex;
@@ -36,12 +60,12 @@ import Steps from '../components/Steps.vue';
 }
 
 #right {
-  background-image: var(--img-map-cover-right);
+  background-image: var(--img-map-cover-right-2);
 
 }
 
 #left {
-  background-image: var(--img-map-cover-left);
+  background-image: var(--img-map-cover-left-2);
 
 }
 
