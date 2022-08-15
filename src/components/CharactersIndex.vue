@@ -7,21 +7,28 @@ import CharacterButton from './CharacterButton.vue';
 const { staff, students } = storeToRefs(useCharacterStore());
 const { index } = storeToRefs(useMapStore());
 
+let studentsAlph = Object.keys(students).sort();
+let staffAlph = Object.keys(staff).sort();
+
+console.log(studentsAlph, staffAlph)
+
+
+
 </script>
 
 <template>
   <div class="index-wrap">
     <div class="character-wrap" v-if="index.group === 'students'">
       <CharacterButton 
-        v-for="character in students" 
-        :name="character.name"
+        v-for="character of Object.keys(students).sort()" 
+        :name="students[character].name"
         group="students"
       />
     </div>
     <div class="character-wrap" id="staff-wrap" v-else-if="index.group === 'staff'">
       <CharacterButton 
-        v-for="character in staff" 
-        :name="character.name"
+        v-for="character of Object.keys(staff).sort()" 
+        :name="staff[character].name"
         group="staff"
       />
     </div>
