@@ -10,10 +10,6 @@ const { index } = storeToRefs(useMapStore());
 let studentsAlph = Object.keys(students).sort();
 let staffAlph = Object.keys(staff).sort();
 
-console.log(studentsAlph, staffAlph)
-
-
-
 </script>
 
 <template>

@@ -13,7 +13,6 @@ const openMapMove = () => {
   const openBtn = document.getElementById('open');
   const coverRight = document.getElementById('right');
   const coverLeft = document.getElementById('left');
-  console.log(coverRight)
   document.getElementById('home-steps').style['opacity'] - 0;
   openBtn.classList.add('open-move');
   coverLeft.classList.add('live-left');

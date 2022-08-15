@@ -42,8 +42,6 @@ export const useCharacterStore = defineStore({
         if (loadCount === 2) this.loading = false;
         staff.push({ name: 'Lord Voldemort', gender: 'Tom Marvolo Riddle', dateOfBirth: 'He Who Must Not Be Named', house: 'You-Know-Who' })
         staff.forEach((character) => this.staff[character.name] = character)
-        console.log(staff)
-        // this.staff['Lord Voldemort'] = { name: 'Lord Voldemort', house: 'Tom Marvolo Riddle', gender: 'He Who Must Not Be Named', eyeColour: 'You-Know-Who' }
       }
 
     },

@@ -16,7 +16,6 @@ const { updateCharacter } = useCharacterStore();
 
 const route = useRoute();
 
-console.log('SHOW', route.params)
 if (route.params.name !== '') {
   let { name, group } = route.params;
   updateCharacter(name, group);
