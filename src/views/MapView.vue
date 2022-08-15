@@ -28,36 +28,49 @@ const handleMenu = (group, index) => {
 
 <template>
 
-    <Map />
+<div class="app-title"></div>
 
-    <div class="show-wrap" v-if="show.open">
-      <CharacterShow />
-    </div>
+<Map />
 
-    <div 
-      class="index-btn"
-      :id="index.open + '-students'"
-      @click="handleMenu('students', index)"
-    >
-    <p>Students</p>
-    </div>
-    <div 
-      class="index-btn" 
-      :id="index.open + '-staff'"
-      @click="handleMenu('staff', index)"
-    >
-    <p>Staff</p>
-    </div>
+<div class="show-wrap" v-if="show.open">
+  <CharacterShow />
+</div>
 
-    <div class="index-wrap" v-if="index.open">
-      <CharactersIndex />
-    </div>
+<div 
+  class="index-btn"
+  :id="index.open + '-students'"
+  @click="handleMenu('students', index)"
+>
+<p>Students</p>
+</div>
+<div 
+  class="index-btn" 
+  :id="index.open + '-staff'"
+  @click="handleMenu('staff', index)"
+>
+<p>Staff</p>
+</div>
 
-    <router-link to="/" class="button" id="open">"...mischief managed"</router-link>
+<div class="index-wrap" v-if="index.open">
+  <CharactersIndex />
+</div>
+
+<router-link to="/" class="button" id="open">"...mischief managed"</router-link>
 
 </template>
 
 <style>
+
+.app-title {
+  margin: 5px;
+  width: 250px;
+  height: 300px;
+  background-image: url('../assets/images/appTitle.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
 
 .map {
   position: fixed;
@@ -96,51 +109,5 @@ const handleMenu = (group, index) => {
   background-repeat: no-repeat;
   z-index: -1;
 }
-
-.index-btn {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  position: fixed;
-  margin: 0;
-  width: 110px;
-  height: 80px;
-  bottom: 120px;
-  border: none;
-  text-align: center;
-}
-
-.index-btn > p {
-  color: var(--color-white);
-  font-size: 19px;
-  margin-top: 20px;
-  margin-left: 10px;
-  cursor: pointer;
-}
-
-#true-students {
-  background-image: url('../assets/images/ribbon-m.png');
-  left: 214px;
-  bottom: 105px;
-}
-
-#false-students {
-  background-image: url('../assets/images/ribbon-m.png');
-  left: -10px;
-  bottom: 105px;
-}
-
-#true-staff {
-  background-image: url('../assets/images/ribbon-r.png');
-  left: 214px;
-  bottom: 45px;
-}
-
-#false-staff {
-  background-image: url('../assets/images/ribbon-r.png');
-  left: -10px;
-  bottom: 45px;
-}
-
 
 </style>

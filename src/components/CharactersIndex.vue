@@ -37,8 +37,9 @@ const { index } = storeToRefs(useMapStore());
     bottom: 0;
     left: 0;
     background-color: var(--color-maroon);
-    width: 225px;
+    width: 255px;
     overflow: scroll;
+    z-index: 2;
 
   }
 
@@ -47,6 +48,7 @@ const { index } = storeToRefs(useMapStore());
   }
 
   .character-wrap {
+    height: fit-content;
     display: flex;
     flex-direction: column;
   }
@@ -55,11 +57,62 @@ const { index } = storeToRefs(useMapStore());
     background-color: var(--color-highlight-maroon);
   }
 
+  .character-name {
+    margin: 5px;
+    margin-left: 16px;
+  }
+
   .list-btn {
     color: var(--color-white);
     font-size: 20px;
     text-align: left;
   }
+
+
+.index-btn {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  position: fixed;
+  margin: 0;
+  width: 110px;
+  height: 80px;
+  bottom: 120px;
+  border: none;
+  text-align: center;
+}
+
+.index-btn>p {
+  color: var(--color-white);
+  font-size: 19px;
+  margin-top: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#true-students {
+  background-image: url('../assets/images/ribbon-m.png');
+  left: 244px;
+  bottom: 105px;
+}
+
+#false-students {
+  background-image: url('../assets/images/ribbon-m.png');
+  left: -10px;
+  bottom: 105px;
+}
+
+#true-staff {
+  background-image: url('../assets/images/ribbon-r.png');
+  left: 244px;
+  bottom: 45px;
+}
+
+#false-staff {
+  background-image: url('../assets/images/ribbon-r.png');
+  left: -10px;
+  bottom: 45px;
+}
 
 
 
