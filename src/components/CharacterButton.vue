@@ -40,7 +40,7 @@ const props = defineProps({
         @click="handleClick(props.name, props.group, show)">
         <router-link 
           class="button list-btn" 
-          :to="{ path: '/' + props.group + '/' + props.name }" 
+          :to="{ path: '/map/' + props.group + '/' + props.name }" 
           :key="props.name"
         >{{props.name === 'Lord Voldemort' ? '???' : props.name}}</router-link>
       </div>

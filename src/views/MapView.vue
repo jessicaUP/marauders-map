@@ -1,14 +1,28 @@
 <script setup>
 import { storeToRefs } from 'pinia';
 import { RouterLink } from 'vue-router';
+import { useCharacterStore } from '../stores/characters';
 import { useMapStore } from '../stores/map';
 import CharactersIndex from '../components/CharactersIndex.vue';
 import CharacterShow from '../components/CharacterShow.vue';
 import Map from '../components/Map.vue';
+import { useRoute } from 'vue-router';
 
 
 const { index, show } = storeToRefs(useMapStore());
-const { openIndex, changeIndex } = useMapStore();
+const { openIndex, changeIndex, openShow } = useMapStore();
+
+const { updateCharacter } = useCharacterStore();
+
+const route = useRoute();
+
+console.log('SHOW', route.params)
+if (route.params.name !== '') {
+  let { name, group } = route.params;
+  updateCharacter(name, group);
+  openShow();
+}
+
 
 const handleMenu = (group, index) => {
   if (index.open) {

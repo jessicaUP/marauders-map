@@ -11,10 +11,11 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/:group/:name',
+      path: '/map/:group?/:name?',
       name: 'character',
       component: MapView
     }
+
   ]
 })
 

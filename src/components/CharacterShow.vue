@@ -11,10 +11,6 @@ const { updateCharacter } = useCharacterStore();
 const { show } = storeToRefs(useMapStore());
 const { openShow, changeShow } = useMapStore();
 
-const route = useRoute();
-let { name, group } = route.params;
-
-updateCharacter(name, group);
 
 </script>
 

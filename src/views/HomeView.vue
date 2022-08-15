@@ -3,7 +3,7 @@ import Steps from '../components/Steps.vue';
 </script>
 
 <template>
-  <router-link to="students/harry potter" class="button" id="open">"I solemnly swear that I am up to no good..."
+  <router-link to="map" class="button" id="open">"I solemnly swear that I am up to no good..."
   </router-link>
 
   <Steps /> 
