@@ -38,7 +38,7 @@ const handleMenu = (group, index) => {
 }
 
 const closeMap = () => {
-  const closeBtn = document.getElementById('close');
+  const closeBtn = document.getElementById('close-map');
   // openBtn.classList.add('open-move');
   setTimeout(() => { closeBtn.click() }, 2000)  
 }
@@ -75,7 +75,7 @@ const closeMap = () => {
   <CharactersIndex />
 </div>
 
-<router-link to="/" class="button" id="close">"...mischief managed"</router-link>
+<router-link to="/" class="button" id="close-map">"...mischief managed"</router-link>
 
 </template>
 
@@ -97,7 +97,7 @@ const closeMap = () => {
 
 }
 
-#close {
+#close-map {
   opacity: 0;
 }
 

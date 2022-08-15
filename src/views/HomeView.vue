@@ -11,15 +11,20 @@ import Steps from '../components/Steps.vue';
 
 const openMapMove = () => {
   const openBtn = document.getElementById('open');
+  const coverRight = document.getElementById('right');
+  const coverLeft = document.getElementById('left');
+  console.log(coverRight)
+  document.getElementById('home-steps').style['opacity'] - 0;
   openBtn.classList.add('open-move');
-  setTimeout(() => { openBtn.click() },  2000)
+  coverLeft.classList.add('live-left');
+  coverRight.classList.add('live-right');
+  setTimeout(() => { openBtn.click() }, 3000);
 }
 </script>
 
 <template>
   <div class="button open" id="click-open" @click="openMapMove"></div>
   <router-link to="map" class="button open" id="open">"I solemnly swear that I am up to no good..."</router-link>
-
 
   <div class="map-cover">
     <div class="cover" id="left"></div>
@@ -50,10 +55,44 @@ const openMapMove = () => {
   z-index: 2;
 }
 
+
+#right {
+  background-image: var(--img-map-cover-right-2);
+}
+
+#left {
+  background-image: var(--img-map-cover-left-2);
+
+}
+
+
+
+.live-right {
+  animation: fadeR 1s ease-in 1 normal forwards;
+}
+
+.live-left {
+  animation: fadeL 1s ease-in 1 normal forwards;
+
+}
+
+@keyframes fadeR {
+  100% {
+    background-image: var(--img-map-cover-right);
+  }
+}
+
+@keyframes fadeL {
+  100% {
+    background-image: var(--img-map-cover-left);
+    }
+}
+
 #home-steps {
   position: fixed;
   top: 55vh;
-  transform: scale(3.2);
+  transform: scale(3);
+  z-index: -3;
 }
 
 .open-move {
@@ -87,18 +126,11 @@ const openMapMove = () => {
   height: 100vh;
   aspect-ratio: 823 / 2920;
   background-size: contain;
+  background-color: white;
   background-repeat: no-repeat;
   box-shadow: 5px 10px 10px var(--color-maroon);
 }
 
-#right {
-  background-image: var(--img-map-cover-right-2);
 
-}
-
-#left {
-  background-image: var(--img-map-cover-left-2);
-
-}
 
 </style>
