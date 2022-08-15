@@ -2,6 +2,11 @@
 import CharacterButton from './CharacterButton.vue';
 import { movingCharacters } from '../assets/movingCharacters'
 import Steps from './Steps.vue';
+import { storeToRefs } from 'pinia';
+import { useCharacterStore } from '../stores/characters';
+
+const { character } = storeToRefs(useCharacterStore());
+
 
 
 </script>
@@ -12,15 +17,18 @@ import Steps from './Steps.vue';
   <div class="character-map">
     <div 
       class="moving-icon" 
-      v-for="character of movingCharacters"
-      :id="character.name.split(' ').join('') + '-move'"
+      v-for="char of movingCharacters"
+      :id="char.name.split(' ').join('') + '-move'"
     >
       <CharacterButton 
-        :name="character.name"
-        :group="character.group"
+        :name="char.name"
+        :group="char.group"
 
       />
-      <!-- <Steps class="btn-feet" :id="character.name.split(' ').join('') + '-feet'"/> -->
+      <Steps 
+        v-if="character && character.name === char.name"
+        class="btn-feet" 
+        :id="char.name.split(' ').join('') + '-feet'"/>
     </div>
     
   </div>
@@ -38,11 +46,16 @@ import Steps from './Steps.vue';
 }
 
 .btn-feet {
-  transform: scale(.5);
+  position: absolute;
+  top: 0;
+  left: -180px;
+  transform: scale(.5) rotate(-90deg);
+  offset-rotate: auto;
+  z-index: -1;
 }
 
 
-#HarryPotter-move {
+#HarryPotter-move, #HarryPotter-feet {
   top: 465px;
   right: 540px;
   offset-path: path('M 0 0 L 58.2781 -3.4967 L 66.437 37.298 L 164.3442 15.1523 L 180.6621 65.2715 L 207.47 60.6092 L 224.9534 173.6687 L 276.2381 166.6753 L 290.2249 238.9401 L 280.9004 250.5958 L 277.4037 243.6024 L 277.4037 258.7547 L 283.2315 252.9269 L 361.3241 241.2713 L 370.6486 324.0261 C 400.9532 366.3749 431.2578 408.7236 461.5624 451.0724 L 334.5162 467.3902 L 317.0328 365.9864 L 182.9932 385.8009 L 167.8409 289.0593 L 141.033 292.556 L 134.0396 285.5626 L 102.5694 282.0659 L 66.437 71.0993 L 54.7814 -8.1589 L 92.0794 -37.298 C 104.1235 -50.1192 116.1676 -62.9403 128.2118 -75.7615 L 0 -120.0528');

@@ -50,7 +50,7 @@
 .foot {
   background-size: contain;
   background-repeat: no-repeat;
-  width: 50px;
+  width: 90px;
   height: 40px;
   opacity: 0;
   animation: fadeOut, fadeIn;
@@ -72,7 +72,7 @@
 }
 
 @keyframes fadeIn {
-  25% {
+  15% {
     opacity: 0;
   }
   100% {
@@ -81,7 +81,7 @@
 }
 
 @keyframes fadeOut {
-  10% {
+  0% {
     opacity: 1;
   }
   100% {
