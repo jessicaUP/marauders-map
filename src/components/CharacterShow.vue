@@ -124,7 +124,7 @@ const { openShow, changeShow } = useMapStore();
   .character-img {
     position: fixed;
     top: 119px;
-    right: 130px;
+    right: 145px;
     width: 150px;
     height: 215px;
     background-size: cover;

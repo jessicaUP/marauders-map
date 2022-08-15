@@ -76,6 +76,9 @@ const handleMenu = (group, index) => {
 <style>
 
 .app-title {
+  position: fixed;
+  top: 0;
+  left: 0;
   margin: 5px;
   width: 250px;
   height: 300px;
