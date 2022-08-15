@@ -61,7 +61,7 @@ const props = defineProps({
 }
 
 .moving-icon>.character-name>.list-btn {
-  color: var(--color-gold);
+  color: var(--color-white);
 } 
 
 </style>
