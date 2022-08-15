@@ -6,7 +6,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  publicPath: '/marauders-map/',
+  publicPath: process.env.NODE_ENV === "production" ? "/REPO_NAME/" : "/",
   plugins: [vue(), vueJsx()],
   resolve: {
     alias: {
