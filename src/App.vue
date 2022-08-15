@@ -23,7 +23,6 @@ const { loading } = storeToRefs(useCharacterStore());
     <div class="content-wrap" v-else >
       <RouterView />
     </div>
-  
   </main>
 
 
