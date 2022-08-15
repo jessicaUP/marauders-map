@@ -4,7 +4,7 @@ By Jessica Uphoff
 
 ## TECHNOLOGIES
 
-LANGUAGES & LIBRARIES
+Languages & Libraries
 
 - Javascript
 - Vue.js - Single page application
@@ -12,9 +12,27 @@ LANGUAGES & LIBRARIES
 - CSS
 - Pinia - Store Management
 
-OPEN API
+Open API
 
-- HP-api [HP-api](http://hp-api.herokuapp.com/)
+- Harry Potter: [HP-api](http://hp-api.herokuapp.com/)
+
+```json
+{ name: "Harry Potter",
+  gender: "male",
+  house: "Gryffindor",
+  dateOfBirth: "31-07-1980",
+  wizard: true,
+  ancestry: "half-blood",
+  eyeColour: "green",
+  hairColour: "black",
+  wand: {
+  wood: "holly",
+  core: "phoenix feather",
+  length: 11
+  },
+  image: "http://hp-api.herokuapp.com/images/harry.jpg"
+}
+```
 
 ## FEATURES
 
