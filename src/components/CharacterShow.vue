@@ -1,44 +1,46 @@
 <script setup>
 import { storeToRefs } from 'pinia';
+import { useRoute } from 'vue-router';
 import { useCharacterStore } from '../stores/characters';
 import { useMapStore } from '../stores/map';
-import { useRoute } from 'vue-router';
-
 
 const { character } = storeToRefs(useCharacterStore());
-const { updateCharacter } = useCharacterStore();
-
 const { show } = storeToRefs(useMapStore());
 const { openShow, changeShow } = useMapStore();
+
+const route = useRoute();
+
+const handleExit = () => {
+  if (route.params.name !== '') {
+    window.history.pushState({}, null, '/map')
+    openShow()
+  }
+
+}
 
 
 </script>
 
 <template>
-  <button v-if="character.image" class="show-btn" id="flip" @click="changeShow()">⤻</button>
-
-  <button class="show-btn" id="close" @click="openShow(true)">✕</button>
-
-  <!-- <div class="pentagon"></div> -->
-  <div class="wizard-card" id="front" v-if="show.side === 'info'"></div>
-  <div class="wizard-card" id="back" v-else></div>
-
-  <div class="card-wrap">
-    <div v-if="show.side === 'picture'" class="character-img" :style="{ backgroundImage: `url(${character.image})` }">
-    </div>
-    <div v-else class="info">
-      <h1 key="character.name">{{ character.name }}</h1>
-      <p>{{character.dateOfBirth}}<br v-if="character.dateOfBirth">
-        {{character.house}}<br v-if="character.house">
-        {{character.gender}}<br v-if="character.gender">
-        {{character.eyeColour ? 'Eye: ' + character.eyeColour : ''}}<br v-if="character.eyeColour">
-        {{ character.hairColour ? 'Hair: ' + character.hairColour : '' }}</p>
-    </div>
+<button v-if="character.image" class="show-btn" id="flip" @click="changeShow()">⤻</button>
+<button class="show-btn" id="close" @click="handleExit()">✕</button>
+<div class="wizard-card" id="front" v-if="show.side === 'info'"></div>
+<div class="wizard-card" id="back" v-else></div>
+<div class="card-wrap">
+  <div v-if="show.side === 'picture'" class="character-img" :style="{ backgroundImage: `url(${character.image})` }">
   </div>
+  <div v-else class="info">
+    <h1 key="character.name">{{ character.name }}</h1>
+    <p>{{character.dateOfBirth}}<br v-if="character.dateOfBirth">
+      {{character.house}}<br v-if="character.house">
+      {{character.gender}}<br v-if="character.gender">
+      {{character.eyeColour ? 'Eye: ' + character.eyeColour : ''}}<br v-if="character.eyeColour">
+      {{ character.hairColour ? 'Hair: ' + character.hairColour : '' }}</p>
+  </div>
+</div>
 </template>
 
 <style>
-
   .wizard-card {
     position: fixed;
     background-size: contain;

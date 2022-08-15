@@ -28,7 +28,6 @@ export const useCharacterStore = defineStore({
       } finally {
         loadCount++;
         if (loadCount === 2) this.loading = false;
- 
         students.forEach((student) => this.students[student.name] = student)
       }
 

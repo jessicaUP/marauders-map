@@ -5,7 +5,6 @@ import { useCharacterStore } from '../stores/characters';
 import { useMapStore } from '../stores/map';
 
 const { updateCharacter } = useCharacterStore();
-
 const { show } = storeToRefs(useMapStore());
 const { openShow, changeShow } = useMapStore();
 
@@ -34,16 +33,17 @@ const props = defineProps({
 </script>
 
 <template>
-      <div 
-        :id="props.name + '-button'" 
-        class="character-name"
-        @click="handleClick(props.name, props.group, show)">
-        <router-link 
-          class="button list-btn" 
-          :to="{ path: '/map/' + props.group + '/' + props.name }" 
-          :key="props.name"
-        >{{props.name === 'Lord Voldemort' ? '???' : props.name}}</router-link>
-      </div>
+<div 
+  :id="props.name + '-button'" 
+  class="character-name"
+  @click="handleClick(props.name, props.group, show)"
+  >
+  <router-link 
+    class="button list-btn" 
+    :to="{ path: '/map/' + props.group + '/' + props.name }" 
+    :key="props.name"
+  >{{props.name === 'Lord Voldemort' ? '???' : props.name}}</router-link>
+</div>
 </template>
 
 <style>

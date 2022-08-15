@@ -7,8 +7,6 @@ import { useCharacterStore } from '../stores/characters';
 
 const { character } = storeToRefs(useCharacterStore());
 
-
-
 </script>
 
 <template>
@@ -30,7 +28,6 @@ const { character } = storeToRefs(useCharacterStore());
         class="btn-feet" 
         :id="char.name.split(' ').join('') + '-feet'"/>
     </div>
-    
   </div>
 
 
@@ -57,7 +54,6 @@ const { character } = storeToRefs(useCharacterStore());
   offset-rotate: auto;
   z-index: -1;
 }
-
 
 #HarryPotter-move, #HarryPotter-feet {
   top: 465px;

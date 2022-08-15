@@ -1,4 +1,4 @@
-/* color palette from <https://github.com/vuejs/theme> */
+/* CSS VARIABLES */
 :root {
   --color-maroon: maroon;
   --color-highlight-maroon: red;
@@ -21,12 +21,11 @@
 
 }
 
-/* semantic color variables for this project */
+
 :root {
   --section-gap: 160px;
   background-color: var(--color-gold);
 }
-
 
 *,
 *::before,

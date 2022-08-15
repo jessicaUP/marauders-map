@@ -1,5 +1,4 @@
 <script setup>
-
 </script>
 
 <template>
@@ -10,9 +9,6 @@
       <div class="foot foot-left" id="left-3"></div>
       <div class="foot foot-left" id="left-4"></div>
       <div class="foot foot-left" id="left-5"></div>
-      <!-- <div class="foot foot-left" id="left-6"></div>
-      <div class="foot foot-left" id="left-7"></div>
-      <div class="foot foot-left" id="left-8"></div> -->
     </div>
     <div class="right-group">
       <div class="foot foot-right" id="right-1"></div>
@@ -20,9 +16,6 @@
       <div class="foot foot-right" id="right-3"></div>
       <div class="foot foot-right" id="right-4"></div>
       <div class="foot foot-right" id="right-5"></div>
-      <!-- <div class="foot foot-right" id="right-6"></div>
-      <div class="foot foot-right" id="right-7"></div>
-      <div class="foot foot-right" id="right-8"></div> -->
     </div>
   </div>
 </template>
