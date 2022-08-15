@@ -37,12 +37,18 @@ const handleMenu = (group, index) => {
   }
 }
 
+const closeMap = () => {
+  const closeBtn = document.getElementById('close');
+  // openBtn.classList.add('open-move');
+  setTimeout(() => { closeBtn.click() }, 2000)  
+}
+
 </script>
 
 
 <template>
 
-<div class="app-title"></div>
+<div class="app-title" @click="closeMap"></div>
 
 <Map />
 
@@ -69,7 +75,7 @@ const handleMenu = (group, index) => {
   <CharactersIndex />
 </div>
 
-<router-link to="/" class="button" id="open">"...mischief managed"</router-link>
+<router-link to="/" class="button" id="close">"...mischief managed"</router-link>
 
 </template>
 
@@ -87,6 +93,16 @@ const handleMenu = (group, index) => {
   background-repeat: no-repeat;
   background-position: center;
   z-index: 1;
+  cursor: pointer;
+
+}
+
+#close {
+  opacity: 0;
+}
+
+.app-title:hover {
+  transform: scale(1.025);
 }
 
 .map {

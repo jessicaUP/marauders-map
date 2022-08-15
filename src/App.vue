@@ -43,6 +43,17 @@ const { loading } = storeToRefs(useCharacterStore());
   overflow: hidden;
 }
 
+.load-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
 
 </style>
 

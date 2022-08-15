@@ -25,6 +25,7 @@ const openMapMove = () => {
     <div class="cover" id="left"></div>
     <div class="cover" id="right"></div>
   </div>
+  <Steps id="home-steps" />
 </template>
 
 <style>
@@ -47,6 +48,12 @@ const openMapMove = () => {
   right: 0;
   left: 0;
   z-index: 2;
+}
+
+#home-steps {
+  position: fixed;
+  top: 55vh;
+  transform: scale(3.2);
 }
 
 .open-move {
